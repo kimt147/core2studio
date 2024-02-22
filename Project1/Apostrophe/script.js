@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(updateClock, 1000); // 1 초마다 시계 업데이트
 }
 updateClock(); // 페이지가 로드 될 때 시계 업데이트 시작
-
+var apostropheImage = document.querySelector('.apostrophe'); // apostrophe 이미지 선택
+apostropheImage.addEventListener('click', function() {
+    document.documentElement.classList.toggle('invert'); // <html> 요소에 invert 클래스 토글
+});
 
 });

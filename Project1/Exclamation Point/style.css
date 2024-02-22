@@ -116,6 +116,33 @@ a{
     display: none;
 }
 
+@keyframes glitch-effect {
+    0% {
+      clip: rect(42px, 9999px, 44px, 0);
+      transform: skew(0.40deg);
+    }
+    10% {
+      clip: rect(89px, 9999px, 90px, 0);
+      transform: skew(0.55deg);
+    }
+    20% {
+      clip: rect(12px, 9999px, 15px, 0);
+      transform: skew(0.50deg);
+    }
+    30% {
+      clip: rect(78px, 9999px, 80px, 0);
+      transform: skew(0.40deg);
+    }
+    40%, 100% {
+      clip: rect(88px, 9999px, 45px, 0);
+      transform: skew(0.55deg);
+    }
+  }
+  
+  .glitch-active {
+    animation: glitch-effect 1s infinite;
+  }
+
 /* 화면 너비에 따른 폰트 크기 조정을 위한 미디어 쿼리 */
 @media (max-width: 1024px) {
     .scrollbox {
@@ -199,3 +226,4 @@ a{
     height: auto; /* 높이를 자동으로 조정하여 비율 유지 */
     transition: transform 3s ease-in-out, opacity 3s ease-in-out; /* 부드러운 변화를 위한 설정 */
 }
+

@@ -122,6 +122,10 @@ a{
     height: auto;
 }
 
+.invert {
+    filter: invert(100%);
+}
+
 @media (max-width: 1024px) {
     .scrollbox {
         font-size: 35px; /* 화면 너비가 1024px 이하일 때 폰트 크기 조정 */

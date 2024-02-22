@@ -50,3 +50,4 @@ function updateClock() {
     var timeString = month + ' ' + date + ' ' + hours + ':' + minutes + ':' + seconds + ' ' + ampm;
     document.getElementById('clock').textContent = timeString;
 }
+
