@@ -53,12 +53,14 @@ a{
     position: absolute;
     will-change: transform;
     animation: marquee 4s linear forwards;
-    font-family: 'Cardinal Fruit', sans-serif; /* Apply the font to the marquee content */
+    font-family: 'cardinalfruit-regular-TRIAL', sans-serif; /* Apply the font to the marquee content */
+    font-style:normal;
     font-size: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
     animation-iteration-count: 1; /* Animation runs only once */
+    src: local(cardinalfruit-regular-TRIAL), url ('cardinalfruit-regular-TRIAL-webfont.woff') format('woff');
 }
 @keyframes marquee {
     0% { bottom: -100%; }
