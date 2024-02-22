@@ -1,0 +1,166 @@
+body {
+    background-color: white; /* 페이지의 배경색을 검정색으로 설정 */
+    
+}
+
+.Rectangle5 {
+    width: 100vw; /* Sets the width to be 100% of the viewport width */
+    height: 49.59px;
+    position: fixed; /* Makes the rectangle stay at the top even when scrolling */
+    top: 0;
+    left: 0;
+    background: #D9D9D9;
+}
+
+
+.Group1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.OnPunctuation, .texts {
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.OnPunctuation {
+    left: 55px;
+    top: 12.59px;
+    position: fixed;
+}
+
+.texts {
+    left: 470.68px;
+    top: 12.59px;
+    font-weight: 400;
+    position: fixed;
+}
+
+.blackCircle {
+    display: inline-block;
+    margin-right: 20px; /* Space between the circle and the text */
+    left: 22px;
+    top: 16px;
+    width: 15px; /* Circle size */
+    height: 15px; /* Circle size */
+    border-radius: 50%; /* Makes the shape circular */
+    background-color: black; /* Circle color */
+    content: ""; /* Ensures the span is treated as a visual element */
+    position: fixed;
+}
+
+.punctuation {
+ 
+    opacity: 0;
+    position: absolute;
+    transition: opacity 2s ease-in-out, transform 5s ease-in-out;
+}
+
+
+.questionmark, .period, .colon, .apostrophe {
+    width: 40px; 
+}
+
+.comma, .exclamationpoint, .semicolon, .quotation {
+    width: 20px; 
+}
+
+.scrollbox {
+    width: 1083px; /* 너비를 더 크게 조정 */
+    height: 655px; /* 높이를 더 크게 조정 */
+    overflow-y: scroll; /* 세로 스크롤 활성화 */
+    border: 3px solid black; /* 경계선 스타일 */
+    padding-top: 5px; /* 상단 내부 여백을 줄임 */
+    padding-right: 50px; /* 오른쪽 내부 여백 */
+    padding-bottom: 5px; /* 아래쪽 내부 여백 */
+    padding-left: 50px; /* 왼쪽 내부 여백 */
+    box-sizing: border-box; /* padding이 박스 크기에 포함되도록 설정 */
+    position: absolute; /* 절대 위치 사용 */
+    left: 70px; /* 오른쪽에서 20px 떨어진 곳에 위치 */
+    top: 140px; /* 상단에서 100px 떨어진 곳에 위치 */
+    font-family: 'Helvetica Neue', sans-serif; /* 폰트 변경 */
+    font-size: 40px; /* 폰트 크기 변경 */
+    border-radius: 119px; /* 모서리 둥글기 */
+    color: black;
+}
+
+.iphone, .button, .back{
+    display: none;
+}
+
+
+/* .questionmark 클래스에 복합 애니메이션 적용 */
+.apostrophe {
+    position: absolute;
+    left: 120px;
+    top: 160px;
+    width: 20%; /* 혹은 원하는 크기로 조정 */
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .scrollbox {
+        font-size: 35px; /* 화면 너비가 1024px 이하일 때 폰트 크기 조정 */
+    }
+}
+
+@media (max-width: 768px) {
+    .scrollbox {
+        font-size: 30px; /* 화면 너비가 768px 이하일 때 폰트 크기 조정 */
+    }
+}
+
+@media (max-width: 480px) {
+    .scrollbox {
+        font-size: 25px; /* 화면 너비가 480px 이하일 때 폰트 크기 조정 */
+    }
+}
+@media (max-width: 375px) {
+    .scrollbox {
+        width: 80%; /* 작은 화면에서는 너비를 화면의 80%로 조정 */
+        height: auto; /* 높이를 내용에 맞게 자동 조정 */
+        max-height: 70%; /* 최대 높이 제한 */
+        padding: 5px 20px; /* 작은 화면에서 내부 여백 조정 */
+        font-size: 20px; /* 작은 화면에서 폰트 크기 줄임 */
+        border-radius: 10px; /* 작은 화면에서 border radius 줄임 */
+        left: 10%;
+        top: 25%;
+    }
+
+    .Rectangle5, .blackCircle, .OnPunctuation, .texts {
+        display: none; /* 작은 화면에서 이 요소들을 숨김 */
+    }
+
+    .apostrophe {
+        display: none;
+    }
+    .iphone {
+        position: absolute;
+        display: inline;
+        left: 50%; /* 가운데 정렬을 위해 왼쪽 위치 수정 */
+        top: 11%; /* 상단 여백 조정 */
+        transform: translateX(-50%); /* 가운데 정렬을 위해 수평 이동 */
+        height: auto; /* 비율 유지 */
+    }
+.button {
+    position: absolute;
+    display: inline;
+    left: 85%; /* 가운데 정렬을 위해 왼쪽 위치 수정 */
+    top: 5%; /* 상단 여백 조정 */
+    transform: translateX(-50%); /* 가운데 정렬을 위해 수평 이동 */
+    height: auto; /* 비율 유지 */
+}
+
+.back{
+    position: absolute;
+    display: inline;
+    right: 77.9%; /* 가운데 정렬을 위해 왼쪽 위치 수정 */
+    top: 5%; /* 상단 여백 조정 */
+    transform: translateX(-50%); /* 가운데 정렬을 위해 수평 이동 */
+}
+}
