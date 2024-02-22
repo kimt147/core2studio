@@ -3,6 +3,19 @@ body {
     
 }
 
+a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover{
+    cursor: alias;
+    background-color: #9d9d9d;
+    color: black;
+    border-radius: 2px;
+  }
+
 .Rectangle5 {
     width: 100vw; /* Sets the width to be 100% of the viewport width */
     height: 49.59px;

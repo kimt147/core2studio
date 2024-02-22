@@ -2,6 +2,28 @@ body {
     background-color: black; /* 페이지의 배경색을 검정색으로 설정 */
 }
 
+a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover{
+    cursor: alias;
+    background-color: #9d9d9d;
+    color: black;
+    border-radius: 2px;
+  }
+
+.clock {
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    color: black;
+    position: fixed;
+    top: 12.59px;
+    right: 20.68px;
+}
+
 .Rectangle5 {
     width: 100vw; /* Sets the width to be 100% of the viewport width */
     height: 49.59px;
@@ -152,7 +174,7 @@ body {
 
     }
 
-    .Rectangle5, .blackCircle, .OnPunctuation, .texts {
+    .Rectangle5, .blackCircle, .OnPunctuation, .texts, .clock {
         display: none; /* 작은 화면에서 이 요소들을 숨김 */
     }
 

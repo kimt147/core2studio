@@ -3,6 +3,27 @@ body {
     
 }
 
+a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover{
+    cursor: alias;
+    background-color: #9d9d9d;
+    color: black;
+    border-radius: 2px;
+  }
+
+  .clock {
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    color: black;
+    position: fixed;
+    top: 12.59px;
+    right: 20.68px;
+}
 .Rectangle5 {
     width: 100vw; /* Sets the width to be 100% of the viewport width */
     height: 49.59px;
@@ -35,7 +56,7 @@ body {
 }
 
 .texts {
-    left: 235.68px;
+    left: 730.68px;
     top: 12.59px;
     font-weight: 400;
     position: fixed;

@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
   animateImages('.comma');
   animateImages('.semicolon');
   animateImages('.colon');
+
+  // 아이폰이 아닌 경우에만 시계 작동
+  if (window.innerWidth !== 375) {
+    updateClock();
+  }
 });
 
 function animateImages(selector) {
@@ -29,4 +34,22 @@ function animateImages(selector) {
 
   // 매 3초마다 이미지 위치, 크기, 회전 각도 업데이트하여 더 자연스러운 움직임 유지
   setTimeout(() => animateImages(selector), 3000);
+}
+
+function updateClock() {
+  var now = new Date();
+  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var month = months[now.getMonth()];
+  var date = now.getDate();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // 0 시간을 12 시간으로 설정
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+  var timeString = month + ' ' + date + ' ' + hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+  document.getElementById('clock').textContent = timeString;
+  setTimeout(updateClock, 1000); // 1 초마다 시계 업데이트
 }

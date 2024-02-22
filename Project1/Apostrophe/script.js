@@ -25,4 +25,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // 애니메이션 실행
   animateImages(apostrophe);
+
+  function updateClock() {
+    var now = new Date();
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var month = months[now.getMonth()];
+    var date = now.getDate();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // 0 시간을 12 시간으로 설정
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    var timeString = month + ' ' + date + ' ' + hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+    document.getElementById('clock').textContent = timeString;
+    setTimeout(updateClock, 1000); // 1 초마다 시계 업데이트
+}
+updateClock(); // 페이지가 로드 될 때 시계 업데이트 시작
+
+
 });
