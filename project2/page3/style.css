@@ -99,7 +99,7 @@ body {
 }
 
 #random-image {
-    width: 500px;
+    width: 480px;
     height: auto;
     border-radius: 30px; /* border-radius 추가 */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
