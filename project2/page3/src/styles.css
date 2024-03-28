@@ -3,11 +3,11 @@ body {
 }
 html,
 body {
-  height: 100%;
+  height: 140%;
 	overflow: hidden;
 }
 canvas {
-position: absolute;
+position: block;
 z-index: -4;
 
 }

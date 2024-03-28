@@ -106,4 +106,25 @@ function smoothPageTransition(event) {
 document.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', smoothPageTransition);
 });
-
+// Function to play sound when animation starts
+function playSound() {
+    var audio = new Audio('./sound.mp3');
+    audio.play();
+  }
+  
+// 웹페이지가 로드된 후 3초가 지나면 MP3 파일을 재생
+window.onload = function() {
+    setTimeout(function() {
+      var audio = new Audio('./sound.mp3');
+      audio.play();
+    }, 5000); // 5000 milliseconds = 3 seconds
+  };
+  
+  // Function to delay showing the notice after 3 seconds
+  setTimeout(function() {
+    var notice = document.getElementById('notice');
+    notice.style.top = '120px'; // Bring the notice down to display
+    playSound(); // Play sound when animation starts
+  }, 5000); // 5000 milliseconds = 5 seconds
+  
+  

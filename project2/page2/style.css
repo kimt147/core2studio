@@ -1,0 +1,100 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: #9d9d9d;
+    color: white;
+    border-radius: 2px;
+}
+
+.top-text-container {
+    position: fixed;
+    top: -3.6px;
+    left: 0;
+    width: 100%;
+    padding: 23.5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    font-family: Helvetica Nue, sans-serif;
+}
+
+.container {
+    margin-top: 60px;
+    padding: 0 20px;
+    max-width: 66.66%;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.full-screen-image {
+    position: relative;
+    height: 100vh; /* Viewport Height: Make this div take the full height of the viewport */
+    width: 100vw; /* Viewport Width: Make this div take the full width of the viewport */
+    overflow: hidden;
+}
+
+.full-screen-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+/* 기존 스타일은 유지하고 추가로 작성합니다. */
+
+
+.rec1, .rec2, .rec3 {
+    width: 130px; /* 이미지 크기를 20px로 조정 */
+    height: auto; /* 이미지의 높이를 자동으로 조정하여 비율 유지 */
+    position: absolute; /* 절대 위치 사용 */
+}
+
+.rec1 {
+    top: 42%; /* 첫 번째 이미지의 위치 조정 */
+    left: 25%;
+    opacity: 0;
+}
+
+.rec2 {
+    top: 50%; /* 두 번째 이미지의 위치 조정 */
+    left: 13.5%;
+    opacity: 0;
+}
+
+.rec3 {
+    top: 50%; /* 세 번째 이미지의 위치 조정 */
+    right: 11.5%;
+    opacity: 0;
+}
+
+
+@media only screen and (max-width: 375px) {
+    .top-text-container {
+        font-size: 13px;
+    }
+}

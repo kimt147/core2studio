@@ -46,6 +46,5 @@ a:hover {
   display: flex;
   justify-content: space-between;
   z-index: 10; /* 다른 컨텐츠 위에 배치 */
-  background-color: black; /* 배경색 추가 */
   font-family: Helvetica Nue, sans-serif;
 }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 이전 CSS 코드 */
+
+        /* 돋보기 효과를 위한 추가 스타일 */
+        .magnifier-lens {
+            position: absolute;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            visibility: hidden; /* 처음에는 숨깁니다. */
+            pointer-events: none; /* 마우스 이벤트 방지 */
+            overflow: hidden;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-text-container">
+        <a href="../index.html" class="left">Home</a>
+        <a href="../page3/index.html" class="right">Random</a>
+    </div>
+    <div class="full-screen-image">
+        <img src="./imgs/map.png" alt="map">
+        <div class="magnifier-lens" id="magnifierLens"></div> <!-- 돋보기 렌즈 추가 -->
+    </div>
+    <div class="rectangle">
+        <a href="../NYC/index.html">
+            <img src="./imgs/rec1.jpg" alt="rec1" class="rec1">
+        </a>
+        <a href="../LA/index.html">
+            <img src="./imgs/rec2.jpg" alt="rec2" class="rec2">
+        </a>
+        <a href="../KOR/index.html">
+            <img src="./imgs/rec3.jpg" alt="rec3" class="rec3">
+        </a>
+    </div>
+    <script>
+        // 돋보기 효과를 위한 스크립트
+        const magnifierLens = document.getElementById('magnifierLens');
+        const image = document.querySelector('.full-screen-image img');
+
+        document.addEventListener('mousemove', function(e) {
+            let bounds = image.getBoundingClientRect();
+            let x = e.pageX - bounds.left - window.pageXOffset;
+            let y = e.pageY - bounds.top - window.pageYOffset;
+
+            // 돋보기 렌즈의 위치와 배경 설정
+            magnifierLens.style.visibility = 'visible';
+            magnifierLens.style.backgroundImage = `url('${image.src}')`;
+            magnifierLens.style.backgroundRepeat = 'no-repeat';
+            // 배경 이미지를 실제 이미지 크기의 2배로 설정하여 확대 효과를 줍니다.
+            magnifierLens.style.backgroundSize = `${image.width * 2}px ${image.height * 2}px`;
+            // 배경 위치를 조정하여 마우스 위치에 따른 올바른 이미지 부분을 보여줍니다.
+            magnifierLens.style.backgroundPosition = `-${x * 2 - 100}px -${y * 2 - 100}px`;
+
+            magnifierLens.style.left = `${e.pageX - 100}px`;
+            magnifierLens.style.top = `${e.pageY - 100}px`;
+        });
+    </script>
+</body>
+</html>

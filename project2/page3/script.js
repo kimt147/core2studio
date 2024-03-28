@@ -33,10 +33,10 @@ function showNextImage() {
 
   const imageInfo = document.getElementById('image-info');
   imageInfo.innerHTML = `
-      <p>When: ${randomImageData.When}</p>
-      <p>Time: ${randomImageData.Time}</p>
-      <p>Where: ${randomImageData.Where}</p>
-      <p>What: ${randomImageData.What}</p>
+      <p><strong>When:</strong> ${randomImageData.When}</p>
+      <p><strong>Time:</strong> ${randomImageData.Time}</p>
+      <p><strong>Where:</strong> ${randomImageData.Where}</p>
+      <p><strong>Where:</strong> ${randomImageData.What}</p>
   `;
 }
 

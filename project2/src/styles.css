@@ -9,7 +9,7 @@ body {
 }
 #canvas3d {
   position: absolute;
-  top: 48%;
+  top: 38%;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -19,6 +19,28 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes slideDown {
+  from {
+    top: -300px; /* Starting position */
+  }
+  to {
+    top: 120px; /* Ending position */
+  }
+}
+
+.notice {
+  position: fixed;
+  top: -350px; /* Initially hide above the viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: auto;
+  z-index: 1000; /* Ensure it's above other content */
+  animation: slideDown 0.5s forwards 5s; /* Apply animation with 3s delay */
+  cursor: pointer;
+}
+
 
 .Title {
   color: white;
@@ -65,6 +87,7 @@ a:hover {
   padding: 20px;
   font-family: Helvetica Nue, sans-serif;
   z-index: 6;
+  
 }
 
 
@@ -88,4 +111,67 @@ a:hover {
 
 .right {
   text-align: right;
+}
+
+.gif {
+  position: absolute; /* 절대 위치 지정 */
+  top: 200%; /* 상단에서부터의 위치 */
+  left: 50%; /* 화면 중앙으로 배치하기 위한 기본 위치 */
+  transform: translate(-50%, -50%); /* 화면 중앙 정확히 배치 */
+  width: 80%; /* 이미지의 너비, 필요에 따라 조정 */
+  height: auto; /* 이미지의 높이를 자동으로 조정하여 비율 유지 */
+  z-index: 0; /* 다른 요소들 위에 표시 */
+  display: block;
+}
+
+@media only screen and (max-width: 375px) {
+  .Title {
+      font-size: 2.5em; /* 모바일 화면 크기에서 글자 크기를 줄임 */
+      top: 20%; /* 모바일 화면에서 중앙으로 조정 */
+  }
+
+  .top-text-container {
+      font-size: 13px;
+  }
+
+  #canvas3d {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4; /* 다른 요소들보다 앞에 위치하도록 설정 */
+  }
+
+  @keyframes slideDown {
+    from {
+      top: -300px; /* Starting position */
+    }
+    to {
+      top: 180px; /* Ending position */
+    }
+  }
+  
+  .notice {
+    position: fixed;
+    top: -350px; /* Initially hide above the viewport */
+    left: 20%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: auto;
+    z-index: 1000; /* Ensure it's above other content */
+    animation: slideDown 0.5s forwards 5s; /* Apply animation with 3s delay */
+    cursor: pointer;
+  }
+
+  .gif {
+    display: inline;
+    top: 60%; /* 상단에서부터의 위치 */
+    left: 50%; /* 화면 중앙으로 배치하기 위한 기본 위치 */
+    transform: translate(-50%, -50%); /* 화면 중앙 정확히 배치 */
+    width: 400%; /* 이미지의 너비, 필요에 따라 조정 */
+    height: auto; /* 이미지의 높이를 자동으로 조정하여 비율 유지 */
+    z-index: 0; /* 다른 요소들 위에 표시 */
+  }
+
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Booth</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-text-container">
+        <a href="../index.html" class="center">Home</a>
+    </div>
+
+<!-- "Start Camera" 버튼 제거 -->
+<div id="abovePhotoBooth">
+    <div id="title">BeTae.</div>
+    <div id="countdown">2:00</div>
+</div>
+<div id="photoBooth">
+    <div class="video-container">
+        <video id="video" autoplay></video>
+        <img id="capture" class="capture" src="./button.png" alt="Capture">
+    </div>
+</div>
+<button id="retakeButton" style="display: none;">Retake</button>
+
+
+
+<div id="output">
+    <img id="photo">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
