@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+	overflow: hidden;
+}
+canvas {
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 18px 0; /* 상단과 하단 패딩만 적용 */
+  background-color: black;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+}
+
+html, body {
+  height: 100%; /* 오버플로우 방지를 위해 100%로 조정 */
+  overflow: auto; /* 필요한 경우 스크롤 허용 */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: #9d9d9d;
+  color: white;
+  border-radius: 2px;
+}
+
+.top-text-container {
+  position: fixed; /* 상단에 고정 */
+  top: -3.6px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10; /* 다른 컨텐츠 위에 배치 */
+  background-color: black; /* 배경색 추가 */
+  font-family: Helvetica Nue, sans-serif;
+}

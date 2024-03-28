@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles.css?v=123" />
+</head>
+<body>
+  <div class="top-text-container">
+    <div class="left">
+      <a href="./About/index.html">About</a>
+    </div>
+    <div class="center">
+      <a href="./page2/index.html">Begin Your Journey</a>
+    </div>
+    <div class="right">
+      <a href="./page3/index.html">Random</a>
+    </div>
+  </div>
+  
+  <canvas id="canvas3d"></canvas>
+  <canvas id="starCanvas"></canvas>
+
+  <div class="Title">BeTae.</div>
+  
+  <!-- Import maps polyfill -->
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@1.0.82/build/runtime.js"
+      }
+    }
+  </script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

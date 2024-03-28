@@ -1,0 +1,614 @@
+[
+    {
+      "Title": "Image1",
+      "When": "Sun, Jun 5, 2022",
+      "Time": "2:41 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "Packing my baggage to Europe"
+    },
+    {
+      "Title": "Image2",
+      "When": "Mon, Mar 18, 2024",
+      "Time": "5:10 PM",
+      "Where": "63 5th Ave, New York, United States",
+      "What": "Japanese Class, gonnichiwa"
+    },
+    {
+      "Title": "Image3",
+      "When": "Tue, Jun 7, 2022",
+      "Time": "11:03 AM",
+      "Where": "Regent St., London, United Kingdom",
+      "What": "Senior Trip to Europe"
+    },
+    {
+      "Title": "Image4",
+      "When": "Tue, Jun 21, 2022",
+      "Time": "5:47 PM",
+      "Where": "Gangnam, Seoul, Korea",
+      "What": "On a subway"
+    },
+    {
+      "Title": "Image5",
+      "When": "Wed, Jun 22, 2022",
+      "Time": "6:47 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "Chilling on my bed"
+    },
+    {
+      "Title": "Image6",
+      "When": "Thu, Jun 23, 2022",
+      "Time": "9:50 PM",
+      "Where": "Sinchon, Seoul, Korea",
+      "What": "Went to a bar w. Migyu"
+    },
+    {
+      "Title": "Image7",
+      "When": "Sat, Jun 25, 2022",
+      "Time": "6:40 PM",
+      "Where": "Gangnam, Seoul, Korea",
+      "What": "On a subway….. SOOSOOOOOOO many people"
+    },
+    {
+      "Title": "Image8",
+      "When": "Wed, Jun 29, 2022",
+      "Time": "6:10 PM",
+      "Where": "Gangnam, Seoul, Korea",
+      "What": "On a subway, so chill today"
+    },
+    {
+      "Title": "Image9",
+      "When": "Fri, Jul 1, 2022",
+      "Time": "12:18 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "Eating bibimbap!!!! YUMMMMM"
+    },
+    {
+      "Title": "Image10",
+      "When": "Sat, Jul 2, 2022",
+      "Time": "6:10 PM",
+      "Where": "Jamsil, Seoul, Korea",
+      "What": "Enjoying rides in Lotteworld!! w. Inky"
+    },
+    {
+      "Title": "Image11",
+      "When": "Mon, Jul 4, 2022",
+      "Time": "5:00 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "On a subway….."
+    },
+    {
+      "Title": "Image12",
+      "When": "Tue, Jul 5, 2022",
+      "Time": "5:00 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "Just woke and I turned on the A.C SOOOO HOTTTTT…"
+    },
+    {
+      "Title": "Image13",
+      "When": "Sat, Jul 9, 2022",
+      "Time": "2:30 PM",
+      "Where": "Gizisi, Busan, Korea",
+      "What": "Went to a water park with my friendssss"
+    },
+    {
+      "Title": "Image14",
+      "When": "Sat, Jul 16, 2022",
+      "Time": "5:07 PM",
+      "Where": "Rodeo, Seoul, Korea",
+      "What": "Shopping Dayyyyyy"
+    },
+    {
+      "Title": "Image15",
+      "When": "Sun, Jul 17, 2022",
+      "Time": "12:44 PM",
+      "Where": "Jamsil, Seoul, Korea",
+      "What": "Eating K-bbq before the Water Festival w. Migyu"
+    },
+    {
+      "Title": "Image16",
+      "When": "Mon, Jul 18, 2022",
+      "Time": "6:17 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "Just woke up…. It’s dinner time!"
+    },
+    {
+      "Title": "Image17",
+      "When": "Wed, Jul 20, 2022",
+      "Time": "5:23 PM",
+      "Where": "Hongdae, Seoul, Korea",
+      "What": "Went to a mall w. Daon"
+    },
+    {
+      "Title": "Image18",
+      "When": "Fri, Jul 22, 2022",
+      "Time": "12:29 PM",
+      "Where": "Yongin, Gyunggido, Korea",
+      "What": "Going homeeeeee"
+    },
+    {
+      "Title": "Image19",
+      "When": "Sat, Jul 23, 2022",
+      "Time": "11:17 PM",
+      "Where": "Guess what? Drinkssssssssssss"
+    },
+    {
+      "Title": "Image20",
+      "When": "Wed, May 18, 2022",
+      "Time": "10:33 PM",
+      "Where": "Jeju-si, Jeju, Korea",
+      "What": "Drinks w. Mingyu and his friends"
+    },
+    {
+      "Title": "Image21",
+      "When": "Tue, May 17, 2022",
+      "Time": "2:12 PM",
+      "Where": "Seogwiposi, Jeju, Korea",
+      "What": "Having a brunch w. Minah"
+    },
+    {
+      "Title": "Image22",
+      "When": "Wed, May 18, 2022",
+      "Time": "2:34 PM",
+      "Where": "Seogwiposi, Jeju, Korea",
+      "What": "Going to Jeju City"
+    },
+    {
+      "Title": "Image23",
+      "When": "Thu, May 19, 2022",
+      "Time": "5:24 PM",
+      "Where": "Seogwiposi, Jeju, Korea",
+      "What": "Drinking!!"
+    },
+    {
+      "Title": "Image24",
+      "When": "Thu, May 19, 2022",
+      "Time": "4:54 PM",
+      "Where": "Seogwiposi, Jeju, Korea",
+      "What": "At my academy"
+    },
+    {
+      "Title": "Image25",
+      "When": "Thu, May 19, 2022",
+      "Time": "8:09 PM",
+      "Where": "Seogwiposi, Jeju, Korea",
+      "What": "Chilling on a bed"
+    },
+    {
+      "Title": "Image26",
+      "When": "Sat, May 21, 2022",
+      "Time": "12:15 PM",
+      "Where": "Seogwiposi, Jeju Korea",
+      "What": "Just had a graduation ceremony"
+    },
+    {
+      "Title": "Image27",
+      "When": "Sun, May 22, 2022",
+      "Time": "1:00 AM",
+      "Where": "Seogwiposi, Jeju, Korea",
+      "What": "Doing a part-time job in a convenience store"
+    },
+    {
+      "Title": "Image28",
+      "When": "Mon, May 23, 2022",
+      "Time": "4:39 PM",
+      "Where": "Jejusi, Jeju, Korea",
+      "What": "Watched a movie"
+    },
+    {
+      "Title": "Image29",
+      "When": "Tue, May 24, 2022",
+      "Time": "12:21 PM",
+      "Where": "Seogwiposi, Jeju, Korea",
+      "What": "Just woke up"
+    },
+    {
+      "Title": "Image30",
+      "When": "Wed, May 25, 2022",
+      "Time": "7:46 AM",
+      "Where": "Chuncheon-si, Gangwon, Korea",
+      "What": "Visiting my grandparents"
+    },
+    {
+      "Title": "Image31",
+      "When": "Fri, May 27, 2022",
+      "Time": "11:35 PM",
+      "Where": "Hongdae, Seoul, Korea",
+      "What": "Drinking w. my friends"
+    },
+    {
+      "Title": "Image32",
+      "When": "Sat, May 28, 2022",
+      "Time": "12:31 PM",
+      "Where": "Gangnam, Seoul, Korea",
+      "What": "On a subway"
+    },
+    {
+      "Title": "Image33",
+      "When": "Sun, Jul 24, 2022",
+      "Time": "9:48 PM",
+      "Where": "Jamsil, Seoul, Korea",
+      "What": "Visited Daon’s place for a skin care."
+    },
+    {
+      "Title": "Image34",
+      "When": "Mon, Jul 25, 2022",
+      "Time": "10:45 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "I was working on my portfolio all day long"
+    },
+    {
+      "Title": "Image35",
+      "When": "Sat, Jul 30, 2022",
+      "Time": "6:43 AM",
+      "Where": "Jamsil, Seoul, Korea",
+      "What": "Went to lotteworld again for the ridessssss"
+    },
+    {
+      "Title": "Image36",
+      "When": "Sun, Jul 31, 2022",
+      "Time": "Yeoido, Seoul, Korea",
+      "Where": "My precious sister, RAONNNNNNN"
+    },
+    {
+      "Title": "Image37",
+      "When": "Mon, Aug 1, 2022",
+      "Time": "12:54 AM",
+      "Where": "Gangnam, Seoul, Korea",
+      "What": "Late night drink w. Minah"
+    },
+    {
+      "Title": "Image38",
+      "When": "Tue, Aug 2, 2022",
+      "Time": "6:33 PM",
+      "Where": "Gangnam, Seoul, Korea",
+      "What": "Screen Golf w. Mingyu"
+    },
+    {
+      "Title": "Image39",
+      "When": "Wed, Aug 3, 2022",
+      "Time": "8:41 AM",
+      "Where": "Yeongdeungpogo, Seoul, Korea",
+      "What": "Getting a military test, I DON’T WANT TOOOOO"
+    },
+    {
+      "Title": "Image40",
+      "When": "Friday, Aug 5, 2022",
+      "Time": "10:34 PM",
+      "Where": "Apgujung, Seoul, Korea",
+      "What": "Getting drinks with my friends as always"
+    },
+    {
+      "Title": "Image41",
+      "When": "Sat, Aug 6, 2022",
+      "Time": "3:30 PM",
+      "Where": "Yongin, Gyunggido, Korea",
+      "What": "Going to my aunt’s house"
+    },
+    {
+      "Title": "Image42",
+      "When": "Sun, Aug 7, 2022",
+      "Time": "7:55 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "Getting ready for my plansssss"
+    },
+    {
+      "Title": "Image43",
+      "When": "Tue, Aug 16, 2022",
+      "Time": "4:30 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "Walking with Raon"
+    },
+    {
+      "Title": "Image44",
+      "When": "Wed, Aug 17, 2022",
+      "Time": "Yeonnam, Seoul, Korea",
+      "Where": "Celebrating my birthday w. Minah"
+    },
+    {
+      "Title": "Image45",
+      "When": "Fri, Aug 19, 2022",
+      "Time": "4:55 PM",
+      "Where": "Yeoido, Seoul, Korea",
+      "What": "Shopping with my mom"
+    },
+    {
+      "Title": "Image46",
+      "When": "Fri, Sep. 2, 2022",
+      "Time": "6:55 PM",
+      "Where": "Korea Town, New York, United States",
+      "What": "Eating K-food w. Daon and Minah"
+    },
+    {
+      "Title": "Image47",
+      "When": "Sat, Sep 10, 2022",
+      "Time": "8:41 PM",
+      "Where": "Korea Town, New York, United States",
+      "What": "Drinking on a bar with my friends"
+    },
+    {
+      "Title": "Image48",
+      "When": "Sun, Sep 11, 2022",
+      "Time": "11:39 PM",
+      "Where": "So ho, New York, United States",
+      "What": "Went to a party with Max and Rohan"
+    },
+    {
+      "Title": "Image49",
+      "When": "Tue, Sep 13, 2022",
+      "Time": "4:25 PM",
+      "Where": "301 1st Ave, New York, United States",
+      "What": "Going to Parsons"
+    },
+    {
+      "Title": "Image50",
+      "When": "Sat, Sep 17, 2022",
+      "Time": "9:04 PM",
+      "Where": "301 1st Ave, New York, United States",
+      "What": "Working on my project"
+    },
+    {
+      "Title": "Image51",
+      "When": "Tue, Sep 20, 2022",
+      "Time": "10:02 PM",
+      "Where": "301 1st Ave, New York, United States",
+      "What": "Working projects with Seoyun"
+    },
+    {
+      "Title": "Image52",
+      "When": "Thu, Sep 22, 2022",
+      "Time": "3:46 PM",
+      "Where": "301 1st Ave, New York, United States",
+      "What": "Waiting for a bus, I’M ALREADY LATE TO CLASS"
+    },
+    {
+      "Title": "Image53",
+      "When": "Fri, Sep 23, 2022",
+      "Time": "1:30 PM",
+      "Where": "301 1st Ave, New York, United States",
+      "What": "Getting ready"
+    },
+    {
+      "Title": "Image54",
+      "When": "Sat, Sep 24, 2022",
+      "Time": "10:06 PM",
+      "Where": "Korea Town, New York, United States",
+      "What": "ALCOHOLLLLL"
+    },
+    {
+      "Title": "Image55",
+      "When": "Thu, Sep 29, 2022",
+      "Time": "8:38 PM",
+      "Where": "Drawing CLASSSS"
+    },
+    {
+      "Title": "Image56",
+      "When": "Sat, Oct 1, 2022",
+      "Time": "7:50 PM",
+      "Where": "1st Ave, New York, United States",
+      "What": "Waiting for the subway"
+    },
+    {
+      "Title": "Image57",
+      "When": "Wed, Oct 5, 2022",
+      "Time": "1:58 PM",
+      "Where": "301 1st Ave, New York, United States",
+      "What": "Waiting for the elevator"
+    },
+    {
+      "Title": "Image58",
+      "When": "Fri, Oct 7, 2022",
+      "Time": "4:13 PM",
+      "Where": "301 1st Ave, New York, Unites States",
+      "What": "Self hair cut, sucks"
+    },
+    {
+      "Title": "Image59",
+      "When": "Sun, Oct 9, 2022",
+      "Time": "12:39 AM",
+      "Where": "63 5th Ave, New York, United States",
+      "What": "Visiting Sangmin’s house"
+    },
+    {
+      "Title": "Image60",
+      "When": "Wed, Oct 12, 2022",
+      "Time": "10:41 PM",
+      "Where": "301 1st Ave, New York, United States",
+      "What": "Rohan Jumpinggggg"
+    },
+    {
+      "Title": "Image61",
+      "When": "Sun, Oct 30, 2022",
+      "Time": "8:18 PM",
+      "Where": "Brooklyn, New York, United States",
+      "What": "Seoyun’s Bday!!"
+    },
+    {
+      "Title": "Image62",
+      "When": "Thu, Nov 3, 2022",
+      "Time": "10:20 AM",
+      "Where": "63 5th Ave, New York, United States",
+      "What": "With my friends"
+    },
+    {
+      "Title": "Image63",
+      "When": "Sun, Mar 17, 2024",
+      "Time": "4:18 PM",
+      "Where": "220W24thSt, New York, United States",
+      "What": "Just woke up"
+    },
+    {
+      "Title": "Image64",
+      "When": "Sat, Mar 16, 2024",
+      "Time": "4:49 PM",
+      "Where": "220W24thSt, New York, United States",
+      "What": "Just woke up"
+    },
+    {
+      "Title": "Image65",
+      "When": "Fri, Mar 15, 2024",
+      "Time": "9:10 PM",
+      "Where": "220W24thSt, New York, United States",
+      "What": "Back at new yorkkkk"
+    },
+    {
+      "Title": "Image66",
+      "When": "Thu, Mar 14, 2024",
+      "Time": "11:42 PM",
+      "Where": "Westchester, Los Angeles, United States",
+      "What": "Getting Panda Express"
+    },
+    {
+      "Title": "Image67",
+      "When": "Thu, Mar 14, 2024",
+      "Time": "6:39 PM",
+      "Where": "Beverly Hills, Los Angeles, United States",
+      "What": "At the signnn"
+    },
+    {
+      "Title": "Image68",
+      "When": "Thu, Mar 14, 2024",
+      "Time": "2:53 PM",
+      "Where": "Beverly Hills, Los Angeles, United States",
+      "What": "Eating Brunch"
+    },
+    {
+      "Title": "Image69",
+      "When": "Wed, Mar 13, 2024",
+      "Time": "8:22 PM",
+      "Where": "Whitley Heights, Los Angeles, United States",
+      "What": "Ubering to citadel outlet"
+    },
+    {
+      "Title": "Image70",
+      "When": "Tue, Mar 12, 2024",
+      "Time": "12:31 AM",
+      "Where": "Bunker Hill, Los Angeles, United States",
+      "What": "Late night swimming"
+    },
+    {
+      "Title": "Image71",
+      "When": "Mon, Mar 11, 2024",
+      "Time": "4:04 PM",
+      "Where": "Jewelry District, Los Angeles, United States",
+      "What": "Eating gyukaku!!"
+    },
+    {
+      "Title": "Image72",
+      "When": "Sun Mar 10, 2024",
+      "Time": "10:17 PM",
+      "Where": "Bunker Hill, Los Angeles, United States",
+      "What": "Ubering back to hotel"
+    },
+    {
+      "Title": "Image73",
+      "When": "Sun, Mar 10, 2024",
+      "Time": "11:09 AM",
+      "Where": "Westchester, Los Angeles, United States"
+    },
+    {
+      "Title": "Image74",
+      "When": "Mon, Mar 4, 2024",
+      "Time": "9:08 PM",
+      "Where": "220W24thSt, New York, United States",
+      "What": "Working on my Midterm"
+    },
+    {
+      "Title": "Image75",
+      "When": "Tue, Mar 5, 2024",
+      "Time": "9:08 AM",
+      "Where": "Soho, New York, United States",
+      "What": "Go shoppinggggg"
+    },
+    {
+      "Title": "Image76",
+      "When": "Fri, Jan 26, 2024",
+      "Time": "10:22 PM",
+      "Where": "Empire State AMC, New York, United States",
+      "What": "Watching Movieeeee"
+    },
+    {
+      "Title": "Image77",
+      "When": "Wed, Jan 31, 2024",
+      "Time": "5:06 PM",
+      "Where": "63 5th Ave, New York, United States",
+      "What": "Walking to a class"
+    },
+    {
+      "Title": "Image78",
+      "When": "Tue, Mar 12, 2024",
+      "Time": "5:31 PM",
+      "Where": "Bunker Hill, Los Angeles, United States",
+      "What": "Waiting for dinner"
+    },
+    {
+      "Title": "Image79",
+      "When": "Wed, Mar 13, 2024",
+      "Time": "12:31 PM",
+      "Where": "Bunker Hill, Los Angeles, United States",
+      "What": "Going to see the Hollywood sign"
+    },
+    {
+      "Title": "Image80",
+      "When": "Wed, Mar 20, 2024",
+      "Time": "4:31 PM",
+      "Where": "63 5th Ave, New York, United States",
+      "What": "Going to school"
+    },
+    {
+      "Title": "Image81",
+      "When": "Thu, Mar 21, 2024",
+      "Time": "5:31 PM",
+      "Where": "Time Square, New York, United States",
+      "What": "On a subway"
+    },
+    {
+      "Title": "Image82",
+      "When": "Fri, Mar 21, 2024",
+      "Time": "5:31 PM",
+      "Where": "Chelsea, New York, United States",
+      "What": "At Home"
+    },
+    {
+      "Title": "Image83",
+      "When": "Sat, Mar 22, 2024",
+      "Time": "5:31 PM",
+      "Where": "Chelsea, New York, United States",
+      "What": "Chill"
+    },
+    {
+      "Title": "Image84",
+      "When": "Sat, Mar 23, 2024",
+      "Time": "5:31 PM",
+      "Where": "63 5th Ave, New York, United States",
+      "What": "School!!"
+    },
+    {
+      "Title": "Image85",
+      "When": "Sun, Mar 24, 2024",
+      "Time": "6:31 PM",
+      "Where": "Chelsea, New York, United States",
+      "What": "House Party"
+    },
+    {
+      "Title": "Image86",
+      "When": "Tue, Mar 26, 2024",
+      "Time": "5:48 PM",
+      "Where": "63 5th Ave, New York, United States",
+      "What": "Japanese class"
+    },
+    {
+      "Title": "Image87",
+      "When": "Fri, Mar 22, 2024",
+      "Time": "8:40 PM",
+      "Where": "Chelsea, New York, United States",
+      "What": "Dinner at Jaq’s House"
+    },
+    {
+      "Title": "Image88",
+      "When": "Sat, Mar 23, 2024",
+      "Time": "1:41 AM",
+      "Where": "Korea Town, New York, United States",
+      "What": "Late night Karaoke"
+    }
+  ]
+  

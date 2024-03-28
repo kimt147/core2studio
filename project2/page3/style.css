@@ -1,0 +1,112 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: #9d9d9d;
+    color: white;
+    border-radius: 2px;
+}
+
+.top-text-container {
+    position: fixed;
+    top: -3.6px;
+    left: 0;
+    width: 100%;
+    padding: 23.5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    background-color: black;
+    font-family: Helvetica Nue, sans-serif;
+}
+
+.container {
+    margin-top: 60px;
+    padding: 0 20px;
+    max-width: 66.66%;
+}
+
+#image-info {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    width: 300px;
+    display: none;
+    padding: 10px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 10px;
+    font-size: small;
+    text-shadow: 0 0 15px rgb(0, 0, 0); /* 더 두꺼운 외곽선 효과 추가 */
+}
+
+#image-info p {
+    margin: 5px 0; /* 위아래 간격을 5px로 설정합니다. */
+}
+
+#random-image:hover + #image-info {
+    display: block;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+#video-background {
+    position: fixed;
+    right: 50;
+    top: -15%; /* 비디오를 조금 내리려면 값을 조정하세요 */
+    min-width: 200%;
+    min-height: 180%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+#image-container {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+
+#image-container {
+    text-align: center;
+    margin-top: 3%; /* 이미지 컨테이너를 위로 이동시킵니다. */
+}
+
+#image-container {
+    text-align: center;
+}
+
+#random-image {
+    width: 500px;
+    height: auto;
+    border-radius: 30px; /* border-radius 추가 */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+}
+
+
+/* 각 데이터 항목을 볼드체로 스타일링합니다. */
+#image-info div {
+    font-weight: bold;
+}
+
+/* 데이터 간의 간격을 줄입니다. */
+#image-info div:not(:last-child) {
+    margin-bottom: 5px;
+}
