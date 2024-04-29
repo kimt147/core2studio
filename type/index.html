@@ -81,6 +81,9 @@
     </div>
     <!-- 추가된 이미지 -->
     <img src="img/app.png" alt="App Icon" class="app-img" id="appImg">
+    <!-- 이미지 생성에 사용될 사운드 추가 -->
+    <audio id="sound" src="img/error.mp3"></audio>
+    <!-- 나머지 코드는 그대로 유지됩니다 -->
 
     <script>
         const imgFolder = 'imgs/';
@@ -110,6 +113,7 @@
             // requestAnimationFrame을 사용하여 반복 호출
             function loop() {
                 addRandomImage(); // 이미지 추가 함수 호출
+                playSound(); // 사운드 재생 함수 호출
                 requestAnimationFrame(loop); // 다음 프레임에도 함수 호출
             }
             // loop 함수 호출하여 반복 작업 시작
@@ -130,6 +134,11 @@
             img.style.display = 'block'; // 수정된 부분
         }
 
+        // 사운드 재생 함수
+        function playSound() {
+            const sound = document.getElementById('sound');
+            sound.play();
+        }
     </script>
 </body>
 </html>
