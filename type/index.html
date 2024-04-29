@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Your PC!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial Narrow', sans-serif;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 36px; /* Adjust as needed */
+            z-index: 999;
+            color: black;
+        }
+
+        .message {
+            font-size: 24px;
+            color:black;
+        }
+
+        .footer {
+            text-align: center;
+            position: fixed;
+            bottom: 2px; /* 더 아래로 내리기 위해 값 조정 */
+            width: 100%;
+            padding: 20px; /* 아래 여백 추가 */
+        }
+
+        .warning {
+            font-size: 12px; /* Adjust as needed */
+            color: black; /* Adjust color as needed */
+        }
+
+        .container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container img {
+            position: absolute;
+            display: none; /* 이미지가 추가되면 보이도록 수정 */
+        }
+
+        /* 추가한 이미지의 스타일 */
+        .app-img {
+            position: absolute;
+            top: 120px; /* 원하는 위치 조정 */
+            right: 200px; /* 원하는 위치 조정 */
+            width: 90px; /* 원하는 크기 조정 */
+            z-index: 9999; /* 다른 요소 위로 배치 */
+            cursor: pointer; /* 포인터 형태로 변경하여 클릭 가능하도록 함 */
+            transition: transform 0.4s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+        }
+
+.app-img:hover {
+    transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 이미지들이 여기에 동적으로 추가될 것입니다. -->
+    </div>
+    <div class="footer">
+        <p class="warning">Please protect your files and hours from the virus beforehand. <br> Lately, you really need to be careful of viruses. They can take everything from important information to all personal data.<br>If your work doesn't get saved, think about how much time and effort would go to waste. <br> Be cautious and develop the habit of saving all documents right now. Let's be careful of viruses!</p>
+    </div>
+    <div class="title">
+        <p class="message">check your pc!</p>
+    </div>
+    <!-- 추가된 이미지 -->
+    <img src="img/app.png" alt="App Icon" class="app-img" id="appImg">
+
+    <script>
+        const imgFolder = 'imgs/';
+        const imgCount = 2263;
+        const imageContainer = document.querySelector('.container');
+        const images = [];
+
+        // 이미지를 미리 생성하여 배열에 저장
+        for (let i = 1; i <= imgCount; i++) {
+            const img = new Image();
+            img.src = imgFolder + `img${i}.jpg`;
+            images.push(img);
+        }
+
+        // 이미지를 클릭했을 때 호출될 함수
+        document.getElementById('appImg').addEventListener('click', function() {
+            // 이미지를 클릭하면 애니메이션 시작
+            startAnimation();
+            // 클릭 이벤트를 제거하여 한 번만 동작하도록 함
+            this.removeEventListener('click', arguments.callee);
+            // 알림 표시
+            alert('Error! You got a virus!');
+        });
+
+        // 애니메이션 시작 함수
+        function startAnimation() {
+            // requestAnimationFrame을 사용하여 반복 호출
+            function loop() {
+                addRandomImage(); // 이미지 추가 함수 호출
+                requestAnimationFrame(loop); // 다음 프레임에도 함수 호출
+            }
+            // loop 함수 호출하여 반복 작업 시작
+            loop();
+        }
+
+        // 이미지 추가 함수를 호출하여 반복적으로 이미지를 생성하도록 함
+        function addRandomImage() {
+            const img = images[Math.floor(Math.random() * imgCount)];
+            const imgWidth = Math.floor(Math.random() * 80) + 20; // 랜덤한 너비
+            const imgLeft = Math.random() * window.innerWidth; // 랜덤한 가로 위치
+            const imgTop = Math.random() * window.innerHeight; // 랜덤한 세로 위치
+            img.style.width = imgWidth + 'px';
+            img.style.position = 'absolute';
+            img.style.left = imgLeft + 'px';
+            img.style.top = imgTop + 'px';
+            imageContainer.appendChild(img);
+            img.style.display = 'block'; // 수정된 부분
+        }
+
+    </script>
+</body>
+</html>

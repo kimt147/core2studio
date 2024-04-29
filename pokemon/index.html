@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Battle Simulator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Welcome to Pokémon Battle Simulator</h1>
+    <div>
+        <label for="pokemon1">Pokemon 1:</label>
+        <input type="text" id="pokemon1" name="pokemon1">
+        <button onclick="getPokemonData(1)">Get Data</button>
+        <div id="pokemon1Data"></div>
+    </div>
+    <div>
+        <label for="pokemon2">Pokemon 2:</label>
+        <input type="text" id="pokemon2" name="pokemon2">
+        <button onclick="getPokemonData(2)">Get Data</button>
+        <div id="pokemon2Data"></div>
+    </div>
+    <div id="battleResult"></div>
+    <button onclick="battle()">Battle</button>
+    <script>
+        function getPokemonData(pokemonNumber) {
+            var pokemonName = document.getElementById('pokemon' + pokemonNumber).value;
+            $.get('/pokemon', { name: pokemonName }, function(data) {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    $('#pokemon' + pokemonNumber + 'Data').html(JSON.stringify(data, null, 2));
+                }
+            });
+        }
+
+        function battle() {
+            var pokemon1 = document.getElementById('pokemon1').value;
+            var pokemon2 = document.getElementById('pokemon2').value;
+
+            $.post('/battle', { pokemon1: pokemon1, pokemon2: pokemon2 }, function(data) {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    $('#battleResult').html('Winner: ' + data.winner);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

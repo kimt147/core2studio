@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Trading Card Maker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .input-box {
+            margin-bottom: 20px;
+            position: absolute; /* 절대 위치 지정 */
+            top: 50px; /* 위에서 50px 떨어진 위치 */
+            left: 20px; /* 왼쪽에서 20px 떨어진 위치 */
+        }
+
+        #textInput {
+            width: 150px;
+            height: 15px;
+            font-size: 13px;
+        }
+
+        #textDisplay {
+            width: 200px;
+            height: 50px;
+            padding: 10px;
+            overflow-y: auto;
+            font-family: PP NeueBit, sans-serif;
+            position: absolute; /* 절대 위치 지정 */
+            top: 175px; /* 위에서 145px 떨어진 위치 */
+            left: 44%; /* 가운데 정렬 */
+            z-index: 4;
+            font-weight: 500;
+            font-size: 2rem;
+            text-transform: uppercase; /* 모든 텍스트를 대문자로 변환 */
+            text-shadow: 
+                -0.15px -0.15px 0 #000,  
+                0.15px -0.15px 0 #000,
+                -0.15px  0.15px 0 #000,
+                0.15px  0.15px 0 #000;
+        }
+
+        #imageUpload {
+            width: 200px;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #uploadedImage img{
+            width: 400px; /* 이미지의 최대 가로 크기 */
+            height: 220px; /* 이미지의 최대 세로 크기 */
+            margin-top: 19px;
+            position: absolute; /* 절대 위치 지정 */
+            top: 200px; /* 이미지의 상단 위치 */
+            left: 50%; /* 이미지를 가운데 정렬 */
+            transform: translateX(-50%); /* 이미지를 수평으로 가운데 정렬 */
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="input-box">
+    <input type="text" id="textInput" placeholder="Enter your text" oninput="displayText()">
+    <button onclick="displayText()">Display Text</button>
+</div>
+<div id="textDisplay"></div>
+
+<input type="file" id="imageUpload" accept="image/*" onchange="displayImage(this)">
+<div id="uploadedImage"></div>
+
+<select id="typeSelect" class="moveSelect">
+    <option value="normal">Normal</option>
+    <option value="fire">Fire</option>
+    <option value="water">Water</option>
+    <option value="electric">Electric</option>
+    <option value="grass">Grass</option>
+    <option value="ice">Ice</option>
+    <option value="fighting">Fighting</option>
+    <option value="poison">Poison</option>
+    <option value="ground">Ground</option>
+    <option value="flying">Flying</option>
+    <option value="psychic">Psychic</option>
+    <option value="bug">Bug</option>
+    <option value="rock">Rock</option>
+    <option value="ghost">Ghost</option>
+    <option value="dragon">Dragon</option>
+    <option value="dark">Dark</option>
+    <option value="steel">Steel</option>
+    <option value="fairy">Fairy</option>
+</select>
+
+<div class="moveContainer" id="moveContainer1">
+    <select class="moveSelect" id="moveSelect1" multiple size="5"></select>
+    <div class="moveDetails moveDetails1">
+        <div class="moveName" id="moveName1"></div>
+        <div class="moveEffect" id="moveEffect1"></div>
+    </div>
+</div>
+
+<div class="moveContainer" id="moveContainer2">
+    <select class="moveSelect" id="moveSelect2" multiple size="5"></select>
+    <div class="moveDetails moveDetails2">
+        <div class="moveName" id="moveName2"></div>
+        <div class="moveEffect" id="moveEffect2"></div>
+    </div>
+</div>
+
+<div class="background">
+    <img id="background-img" src="imgs/background.jpg" alt="Background Image">
+</div>
+
+<div class="flip-container" id="typeImage">
+    <div class="flipper">
+        <img class="front" src="imgs/front.png" alt="Front Image">
+        <img class="back" src="imgs/back.png" alt="Back Image">
+    </div>
+</div>
+
+<div class="button-wrapper">
+    <button id="musicBtn" class="button" onclick="toggleMusic()">
+        <img src="imgs/music button.png" alt="Music">
+    </button>
+    <button class="button button-download" onclick="downloadImage()">
+        <img src="imgs/download.png" alt="Download">
+    </button>
+</div>    
+
+
+<div class="home">
+    <a href="../intro/index.html">
+        <img src="imgs/homebutton.png">
+    <audio id="bgm" src="imgs/bgm.mp3" loop></audio>
+
+
+<script>
+    function displayText() {
+        var inputText = document.getElementById("textInput").value;
+        var textDisplay = document.getElementById("textDisplay");
+        textDisplay.textContent = inputText;
+    }
+
+    function displayImage(input) {
+        var file = input.files[0];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var img = new Image();
+            img.src = e.target.result;
+            img.onload = function() {
+                var uploadedImage = document.getElementById("uploadedImage");
+                uploadedImage.innerHTML = "";
+                uploadedImage.appendChild(img);
+            }
+        }
+        reader.readAsDataURL(file);
+    }
+</script>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</body>
+</html>

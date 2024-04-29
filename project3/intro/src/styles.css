@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  background-color: #6c6c6c;
+}
+html,
+body {
+  height: 100%;
+	overflow: hidden;
+}
+canvas {
+  position: relative;
+  top: 10%;
+  z-index: 0;
+}
+
+.logo {
+  position: absolute; /* 로고의 위치를 조정하기 위해 절대 위치 지정 */
+  top: 10%; /* 로고의 상단 여백 조정 */
+  left: 38%; /* 로고의 왼쪽 여백 조정 */
+  width: 350px; /* 로고의 너비 조정 */
+  height: auto; /* 로고의 높이를 자동으로 조정하여 비율 유지 */
+  z-index: 1;
+}
+
+.about {
+  width: 100px; /* Adjust the initial size of the icon */
+  height: auto;
+  position: absolute;
+  top: 40%; /* Adjust the initial top position */
+  left: 62%; /* Adjust the initial left position */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for enlargement */
+  z-index: 2;
+}
+
+.let {
+  width: 100px; /* Adjust the initial size of the icon */
+  height: auto;
+  position: absolute;
+  top: 40%; /* Adjust the initial top position */
+  left: 70%; /* Adjust the initial left position */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for enlargement */
+  z-index: 2;
+}
+
+
+
+.pokeball,
+.pokebal img,
+.ash,
+.letter,
+.pikachu,
+.card {
+  width: 100px; /* Adjust the initial size of the image */
+  height: auto;
+  position: absolute;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for enlargement */
+}
+
+
+.pokeball {
+  top: 30%; /* Adjust the initial top position for image1 */
+  left: 75%; /* Adjust the initial left position for image1 */
+  z-index: 2;
+  transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+
+}
+
+.pokebal img{
+  top: 30%; /* Adjust the initial top position for image1 */
+  right: 66%; /* Adjust the initial left position for image1 */
+  z-index: 4;
+}
+
+.ash {
+  top: 70%; /* Adjust the initial top position for image2 */
+  left: 80%; /* Adjust the initial left position for image2 */
+  z-index: 2;
+  width: 120px;
+}
+
+
+.pikachu {
+  top: 80%;
+  right: 80%;
+  z-index: 2;
+}
+
+.pikachu img {
+  width: 140px; /* 이미지의 초기 너비 지정 */
+  transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+}
+
+.pikachu img:hover {
+  transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+}
+
+.card {
+  top: 45%;
+  right: 80%;
+  z-index: 3;
+}
+
+.card img {
+  width: 90px; /* 이미지의 초기 너비 지정 */
+  transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+
+}
+
+.card img:hover {
+  transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+}
+
+.pokebal img:hover {
+  transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+}

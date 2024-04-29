@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header{
+	z-index: 100;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5vh;
+  top: 1vh;
+  position: relative;
+  font-family: roc-grotesk,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a{
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover{
+  cursor: alias;
+  background-color: #b442fd;
+  color: #ffffff;
+  border-radius: 2px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+img {
+    position: absolute;
+}
+
+#september {
+    width: 90%;
+    height: auto;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#computer {
+    width: 80%;
+    height: auto;
+    top: 35%;
+    left: 13%;
+    z-index: 2;
+}
+
+#memories {
+    width: 30%;
+    height: auto;
+    top: 35%;
+    left: 30%;
+    z-index: 0;
+}
+
+#notebook {
+    width: 30%;
+    height: auto;
+    top: 35%;
+    left: 63%;
+    z-index: 3;
+}
+
+#objects {
+    width: 25%;
+    height: auto;
+    top: 50%;
+    left: 0%;
+    z-index: 4;
+}
+
+#box {
+    width: 23%;
+    height: auto;
+    top: 86%;
+    left: 67%;
+    z-index: 5;
+}
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Pikachu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <button id="colorBtn" class="button" onclick="toggleOptions('color-options')">
+                <img src="imgs/colorsbutton.png" alt="Color Button">
+            </button>
+            <button id="expressionBtn" class="button" onclick="toggleOptions('expression-options')">
+                <img src="imgs/facebutton.png" alt="Expression Button">
+            </button>
+            <button id="backgroundBtn" class="button" onclick="toggleOptions('background-options')">
+                <img src="imgs/backbutton.png" alt="Background Button">
+            </button>
+            <div class="color-options options">
+                <button class="button" onclick="setColor('yellow')">
+                    <img src="imgs/coloryellow.png" alt="Yellow Color">
+                </button>
+                <button class="button" onclick="setColor('pink')">
+                    <img src="imgs/colorpink.png" alt="Pink Color">
+                </button>
+                <button class="button" onclick="setColor('purple')">
+                    <img src="imgs/colorpurple.png" alt="Purple Color">
+                </button>
+                <button class="button" onclick="setColor('blue')">
+                    <img src="imgs/colorblue.png" alt="Blue Color">
+                </button>
+                <button class="button" onclick="setColor('black')">
+                    <img src="imgs/colorblack.png" alt="Black Color">
+                </button>
+                <button class="button" onclick="setColor('white')">
+                    <img src="imgs/colorwhite.png" alt="White Color">
+                </button>
+            </div>
+            <div class="expression-options options">
+                <button class="button" onclick="changeExpression('evil')">
+                    <img src="imgs/evilbutton.png" alt="Evil Expression">
+                </button>
+                <button class="button" onclick="changeExpression('kind')">
+                    <img src="imgs/kindbutton.png" alt="Kind Expression">
+                </button>
+                <button class="button" onclick="changeExpression('wink')">
+                    <img src="imgs/winkbutton.png" alt="Wink Expression">
+                </button>
+                <button class="button" onclick="changeExpression('smile')">
+                    <img src="imgs/smilebutton.png" alt="Smile Expression">
+                </button>
+                <button class="button" onclick="changeExpression('sleepy')">
+                    <img src="imgs/sleepybutton.png" alt="Sleepy Expression">
+                </button>
+            </div>
+            <div class="background-options options">
+                <button class="button" onclick="setBackground('ice')">
+                    <img src="imgs/icebutton.png" alt="Ice Background">
+                </button>
+                <button class="button" onclick="setBackground('cave')">
+                    <img src="imgs/cavebutton.png" alt="Cave Background">
+                </button>
+                <button class="button" onclick="setBackground('UnderWater')">
+                    <img src="imgs/underwaterbutton.png" alt="Underwater Background">
+                </button>
+                <button class="button" onclick="setBackground('forest')">
+                    <img src="imgs/forestbutton.png" alt="Forest Background">
+                </button>
+                <button class="button" onclick="setBackground('coast')">
+                    <img src="imgs/coastbutton.png" alt="Coast Background">
+                </button>
+            </div>
+        </div>
+
+
+                <div class="background">
+            <img id="background-img" src="imgs/forest.jpg" alt="Background Image">
+        </div>
+        <img id="pikachu" src="imgs/default.png" alt="pikachu">
+    </div>
+
+    <img id="shadow" src="imgs/shadow.png" alt="shadow">
+
+    <audio id="evilSound" src="imgs/evil.mp3"></audio>
+    <audio id="kindSound" src="imgs/kind.mp3"></audio>
+    <audio id="winkSound" src="imgs/wink.mp3"></audio>
+    <audio id="smileSound" src="imgs/smile.mp3"></audio>
+    <audio id="sleepySound" src="imgs/sleepy.mp3"></audio>
+
+    <div class="button-wrapper">
+        <button id="musicBtn" class="button" onclick="toggleMusic()">
+            <img src="imgs/music button.png" alt="Music">
+        </button>
+        <button class="button button-download" onclick="downloadImage()">
+            <img src="imgs/download.png" alt="Download">
+        </button>
+    </div>    
+
+    <div class="home">
+        <a href="../intro/index.html">
+            <img src="imgs/homebutton.png">
+    <audio id="bgm" src="imgs/bgm.mp3" loop></audio>
+
+    <div class="card">
+        <a href="../newpoke copy/index.html">
+            <img src="imgs/card.png">
+
+    <script src="script.js"></script>
+</body>
+</html>

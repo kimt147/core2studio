@@ -1,0 +1,203 @@
+body {
+    background-color: #EFEDE8;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+	z-index: 100;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5vh;
+  top: 1vh;
+  position: relative;
+  font-family: roc-grotesk,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a{
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover{
+  cursor: alias;
+  background-color: #b442fd;
+  color: #ffffff;
+  border-radius: 2px;
+}
+
+.text1 {
+    color: #B6B1A6;
+    font-size: 1200%;
+    font-family: Freshman;
+    font-weight: 400;
+    word-wrap: break-word;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+img {
+    position: absolute;
+    max-width: 100%;
+    opacity: 0.1; 
+    transition: opacity 0.3s ease; 
+    filter: blur(2px);
+}
+
+img:hover {
+    opacity: 1;
+    filter: blur(0);
+}
+
+
+
+#bag2 {
+    width: 30%;
+    height: auto;
+    top: 0px;
+    right: -15%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+#mac {
+    width: 19%;
+    height: auto;
+    top: 65%;
+    left: 35%;
+    transform: rotate(-18deg);
+    z-index: 0;
+}
+
+#haribo {
+    width: 8%;
+    height: auto;
+    top: 74%;
+    left: 28%;
+    z-index: 3;
+    transform: rotate(15deg);
+}
+
+#lipbalm {
+    width: 2.5%;
+    height: auto;
+    top: 10%;
+    left: 70%;
+    z-index: 4;
+    transform: rotate(-20deg);
+}
+
+#airpodsmax {
+    width: 15%;
+    height: auto;
+    top: 45%;
+    left: 45%;
+    z-index: 5;
+    transform: rotate(12.3deg);
+}
+
+#pencilcase {
+    width: 15%;
+    height: auto;
+    top: 30%;
+    left: 52%;
+    z-index: 5;
+    transform: rotate(-22deg);
+}
+
+@media (max-width: 680px) {
+
+    .text1 {
+        color: #B6B1A6;
+        font-size: 60px;
+        font-family: Freshman;
+        font-weight: 400;
+        word-wrap: break-word;
+        position: absolute;
+        top: 140px;
+        left: 170px;
+        transform: translate(-50%, -50%);
+    }
+    .container {
+      display: flex;
+      flex-direction: row; 
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+  
+    img {
+      position: absolute;
+      max-width: 100%;
+    }
+  
+    #bag2 {
+      width: 250px;
+      height: auto;
+      top: 450px;
+      left: 500px;
+      z-index: 2;
+    }
+  
+    #mac {
+      width: 26%;
+      height: auto;
+      top: 600px;
+      left: 48px;
+      transform: rotate(-18deg);
+      z-index: 0;
+    }
+  
+    #haribo {
+      width: 15%;
+      height: auto;
+      top: 760px;
+      left: 120px;
+      z-index: 3;
+      transform: rotate(15deg);
+    }
+  
+    #lipbalm {
+      width: 4%;
+      height: auto;
+      top: 400px;
+      left: 100px;
+      z-index: 4;
+      transform: rotate(-20deg);
+    }
+  
+    #airpodsmax {
+      width: 20%;
+      height: auto;
+      top: 45%;
+      left: 45%;
+      z-index: 5;
+      transform: rotate(12.3deg);
+    }
+  
+    #pencilcase {
+      width: 30%;
+      height: auto;
+      top: 220px;
+      left: 52%;
+      z-index: 5;
+      transform: rotate(-22deg);
+    }
+  }
+  

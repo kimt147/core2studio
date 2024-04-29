@@ -1,0 +1,327 @@
+body {
+    background-color: #3E5FD0;
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323';
+    
+}
+
+header{
+	z-index: 100;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5vh;
+  top: 1vh;
+  position: relative;
+  font-family: roc-grotesk,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  cursor: alias;
+  background-color: #b442fd;
+  color: #0e3521;
+  border-radius: 2px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+img {
+    position: absolute;
+}
+
+#title {
+    width: 30%;
+    height: auto;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#finder {
+    width: 60%;
+    height: auto;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#hoodie {
+    width: 15%;
+    height: auto;
+    top: 38%;
+    left: 43%;
+    z-index: 2;
+}
+
+#shoes {
+    width: 12%;
+    height: auto;
+    top: 37%;
+    left: 62%;
+    z-index: 6;
+}
+
+#jeans {
+    width: 12%;
+    height: auto;
+    top: 57%;
+    left: 62%;
+    z-index: 3;
+}
+
+#music {
+    width: 15%;
+    height: auto;
+    top: 43%;
+    left: 23%;
+    z-index: 4;
+}
+
+#folder1 {
+    width: 10%;
+    height: auto;
+    top: 67%;
+    left: 11%;
+}
+
+#folder2 {
+    width: 10%;
+    height: auto;
+    top: 40%;
+    left: 0%;
+}
+
+#folder3 {
+    width: 10%;
+    height: auto;
+    top: 10%;
+    left: 73%;
+}
+
+#folder4 {
+    width: 10%;
+    height: auto;
+    top: 60%;
+    left: 85%;
+}
+
+#icon1 {
+    width: 8%;
+    height: auto;
+    top: 14%;
+    left: 14%;
+}
+
+#musicplayer {
+    display: none;
+    width: 17%;
+    top: 75%;
+    z-index: 7;
+    position: absolute;
+    left: 22%;
+    transform: translateY(50%);
+}
+
+#text1 {
+    color: #2E3227;
+    font-size: 18px; 
+    text-align: center;
+    position: absolute;
+    top: 71%; 
+    left: 50.5%;
+    transform: translate(-50%, -50%); 
+    z-index: 9
+}
+
+#text2 {
+    color: #2E3227; 
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    top: 54%;
+    left: 68.3%;
+    transform: translate(-50%, -50%); 
+    z-index: 10;
+}
+
+#text3 {
+    color: #2E3227;
+    font-size: 18px; 
+    text-align: center;
+    position: absolute;
+    top: 83%;
+    left: 68.3%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+#text4 {
+    color: #2E3227; 
+    font-size: 25px; 
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 45.5%; 
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+#text5 {
+    color: #2E3227;
+    font-size: 35px;
+    text-align: center;
+    position: absolute;
+    top: 22%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+@media (max-width: 1000px) {
+    #title {
+        width: 35%;
+        height: auto;
+        top: 10%;
+    }
+    
+    #text5 {
+        font-size: 26px;
+        text-align: center;
+        position: absolute;
+        top: 21.5%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+    #text4 {
+        color: #2E3227; 
+        font-size: 20px; 
+        text-align: center;
+        position: absolute;
+        top: 26%;
+        left: 47%; 
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+    #hoodie {
+        width: 15%;
+        height: auto;
+        top: 30%;
+        left: 43%;
+        z-index: 2;
+    }
+    
+    #shoes {
+        width: 12%;
+        height: auto;
+        top: 30%;
+        left: 62%;
+        z-index: 6;
+    }
+    
+    #jeans {
+        width: 12%;
+        height: auto;
+        top: 42%;
+        left: 62%;
+        z-index: 3;
+    }
+
+    #text1 {
+        color: #2E3227;
+        font-size: 18px; 
+        text-align: center;
+        position: absolute;
+        top: 49.4%; 
+        left: 50.5%;
+        transform: translate(-50%, -50%); 
+        z-index: 9
+    }
+    
+    #text2 {
+        color: #2E3227; 
+        font-size: 18px;
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        left: 68.3%;
+        transform: translate(-50%, -50%); 
+        z-index: 10;
+    }
+    
+    #text3 {
+        color: #2E3227;
+        font-size: 18px; 
+        text-align: center;
+        position: absolute;
+        top: 58%;
+        left: 68.3%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+    #music {
+        width: 15%;
+        height: auto;
+        top: 32%;
+        left: 23%;
+        z-index: 4;
+    }
+    #musicplayer {
+        width: 17%;
+        top: 50%;
+        z-index: 7;
+        position: absolute;
+        left: 22%;
+        transform: translateY(50%);
+    }
+    #folder1 {
+        width: 20%;
+        height: auto;
+        top: 70%;
+        left: 5%;
+    }
+    
+    #folder2 {
+        width: 20%;
+        height: auto;
+        top: 35%;
+        left: -10%;
+    }
+    
+    #folder3 {
+        width: 20%;
+        height: auto;
+        top: 10%;
+        left: 73%;
+    }
+    
+    #folder4 {
+        width: 20%;
+        height: auto;
+        top: 60%;
+        left: 85%;
+    }
+    
+    #icon1 {
+        width: 18%;
+        height: auto;
+        top: 12%;
+        left: 8%;
+    }
+}
