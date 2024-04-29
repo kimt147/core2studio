@@ -63,7 +63,21 @@
             transition: transform 0.4s ease-in-out; /* 호버 효과를 위한 트랜지션 */
         }
 
+        .app-img2 {
+            position: absolute;
+            bottom: 120px; /* 원하는 위치 조정 */
+            left: 200px; /* 원하는 위치 조정 */
+            width: 90px; /* 원하는 크기 조정 */
+            z-index: 9999; /* 다른 요소 위로 배치 */
+            cursor: pointer; /* 포인터 형태로 변경하여 클릭 가능하도록 함 */
+            transition: transform 0.4s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+        }
+
 .app-img:hover {
+    transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+}
+
+.app-img2:hover {
     transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
 }
     </style>
@@ -81,6 +95,7 @@
     </div>
     <!-- 추가된 이미지 -->
     <img src="img/app.png" alt="App Icon" class="app-img" id="appImg">
+    <img src="img/app2.png" alt="App Icon" class="app-img2" id="appImg2">
     <!-- 이미지 생성에 사용될 사운드 추가 -->
     <audio id="sound" src="img/error.mp3"></audio>
     <!-- 나머지 코드는 그대로 유지됩니다 -->
@@ -139,6 +154,33 @@
             const sound = document.getElementById('sound');
             sound.play();
         }
+
+// app-img2를 클릭했을 때 호출될 함수
+document.getElementById('appImg2').addEventListener('click', function() {
+    // 이미지를 클릭하면 애니메이션 시작
+    startAnimation();
+    // 클릭 이벤트를 제거하여 한 번만 동작하도록 함
+    this.removeEventListener('click', arguments.callee);
+    // 알림 표시
+    alert('Error! You got a virus!');
+    // 이미지 숨기고 문구 변경 함수 호출
+    updateTextAndHideImages();
+    // .container를 숨김
+    document.querySelector('.container').style.display = 'none';
+    // app-img2를 숨김
+    this.style.display = 'none';
+});
+
+// check your pc! 문구를 told you, be careful. 로 변경하고 생성된 이미지를 숨기는 함수
+function updateTextAndHideImages() {
+    // check your pc! 문구를 told you, be careful. 로 변경
+    document.querySelector('.message').textContent = 'told you, be careful.';
+    // 생성된 이미지들 숨기기
+    const imgElements = document.querySelectorAll('.container img');
+    imgElements.forEach(img => {
+        img.style.display = 'none';
+    });
+}     
     </script>
 </body>
 </html>
