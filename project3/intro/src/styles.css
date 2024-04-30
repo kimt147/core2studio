@@ -23,21 +23,22 @@ canvas {
 }
 
 .about {
-  width: 100px; /* Adjust the initial size of the icon */
+  width: 130px; /* Adjust the initial size of the icon */
   height: auto;
   position: absolute;
   top: 40%; /* Adjust the initial top position */
-  left: 62%; /* Adjust the initial left position */
+  left: 66%; /* Adjust the initial left position */
   transition: transform 0.3s ease-in-out; /* Smooth transition for enlargement */
   z-index: 2;
 }
+
 
 .let {
   width: 100px; /* Adjust the initial size of the icon */
   height: auto;
   position: absolute;
   top: 40%; /* Adjust the initial top position */
-  left: 70%; /* Adjust the initial left position */
+  left: 74%; /* Adjust the initial left position */
   transition: transform 0.3s ease-in-out; /* Smooth transition for enlargement */
   z-index: 2;
 }
@@ -58,8 +59,8 @@ canvas {
 
 
 .pokeball {
-  top: 30%; /* Adjust the initial top position for image1 */
-  left: 75%; /* Adjust the initial left position for image1 */
+  top: 28%; /* Adjust the initial top position for image1 */
+  left: 79%; /* Adjust the initial left position for image1 */
   z-index: 2;
   transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
 
