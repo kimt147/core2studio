@@ -54,14 +54,14 @@ html {
 
 #pikachu {
     position: relative;
-    top: 160px;
+    top: 140px;
     width: 30%;
     height: auto;
 }
 
 #shadow {
     position: absolute;
-    top: 85%;
+    top: 83%;
     left: 48.5%;
     transform: translateX(-50%);
     width: 30%;
@@ -178,7 +178,7 @@ html {
 .home {
     position: fixed;
     top: 50px; /* 버튼이 보여야 할 위치로 수정 */
-    left: 77.5%; /* 버튼이 보여야 할 위치로 수정 */
+    left: 72%; /* 버튼이 보여야 할 위치로 수정 */
 }
 
 .home img {
@@ -208,3 +208,124 @@ html {
 .card img:hover {
     transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
 }
+
+.info {
+    position: fixed;
+    top: 50px; /* 버튼이 보여야 할 위치로 수정 */
+    left: 77.5%; /* 버튼이 보여야 할 위치로 수정 */
+}
+
+.info img {
+    width: 4vw;
+    height: auto;
+    transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+
+}
+
+.info img:hover {
+    transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+}
+
+/* CSS */
+
+.info-box {
+    position: fixed;
+    top: 140px;
+    left: 84%;
+    transform: translateX(-50%);
+    width: 25%;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    display: none; /* 초기에는 숨김 */
+    font-family: Pokemon Classic;
+}
+
+.info-box.show {
+    display: block; /* 보여질 때만 표시 */
+}
+
+.info-content {
+    text-align: left;
+}
+
+.info-content h2 {
+    margin-top: 0;
+}
+
+.info-content ol {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.info-content img {
+    display: block;
+    margin: 10px auto; /* 이미지를 가운데 정렬합니다. */
+    max-width: 100%; /* 이미지가 너무 크면 부모 요소에 맞게 크기를 조정합니다. */
+}
+
+h2{
+    font-size: 1.3rem;
+}
+
+p{
+    font-size: 0.9rem;
+}
+
+ol{
+    font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 375px) {
+    .controls button img{
+        width: 40%;    
+    }
+    #pikachu {
+        position: relative;
+        top: 100px;
+        width: 60%;
+        height: auto;
+        left: 3%;
+    }
+
+    #shadow {
+        position: absolute;
+        top: 78%;
+        left: 49%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: auto;
+        z-index: -1;
+    }
+
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; /* 가운데 정렬 추가 */
+        top: 40%;
+        gap: 10px; /* 간격 조절 */
+    }
+
+    .options button{
+        width: 14vw;
+    }
+    
+    .options button img{
+        width: 100%;
+        transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+    
+    }
+
+    .controls {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+  }

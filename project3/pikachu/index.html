@@ -39,12 +39,6 @@
                 </button>
             </div>
             <div class="expression-options options">
-                <button class="button" onclick="changeExpression('evil')">
-                    <img src="imgs/evilbutton.png" alt="Evil Expression">
-                </button>
-                <button class="button" onclick="changeExpression('kind')">
-                    <img src="imgs/kindbutton.png" alt="Kind Expression">
-                </button>
                 <button class="button" onclick="changeExpression('wink')">
                     <img src="imgs/winkbutton.png" alt="Wink Expression">
                 </button>
@@ -54,6 +48,16 @@
                 <button class="button" onclick="changeExpression('sleepy')">
                     <img src="imgs/sleepybutton.png" alt="Sleepy Expression">
                 </button>
+                <button class="button" onclick="changeExpression('angry')">
+                    <img src="imgs/angrybutton.png" alt="Angry Expression">
+                </button>
+                <button class="button" onclick="changeExpression('evil')">
+                    <img src="imgs/evilbutton.png" alt="Evil Expression">
+                </button>
+                <button class="button" onclick="changeExpression('kind')">
+                    <img src="imgs/kindbutton.png" alt="Kind Expression">
+                </button>
+
             </div>
             <div class="background-options options">
                 <button class="button" onclick="setBackground('ice')">
@@ -78,16 +82,17 @@
                 <div class="background">
             <img id="background-img" src="imgs/forest.jpg" alt="Background Image">
         </div>
-        <img id="pikachu" src="imgs/default.png" alt="pikachu">
+        <img id="pikachu" src="imgs/default.png" alt="default">
     </div>
 
     <img id="shadow" src="imgs/shadow.png" alt="shadow">
 
-    <audio id="evilSound" src="imgs/evil.mp3"></audio>
+    <audio id="angrySound" src="imgs/angry.mp3"></audio>
     <audio id="kindSound" src="imgs/kind.mp3"></audio>
     <audio id="winkSound" src="imgs/wink.mp3"></audio>
     <audio id="smileSound" src="imgs/smile.mp3"></audio>
     <audio id="sleepySound" src="imgs/sleepy.mp3"></audio>
+    <audio id="evilSound" src="imgs/evil.m4a"></audio>
 
     <div class="button-wrapper">
         <button id="musicBtn" class="button" onclick="toggleMusic()">
@@ -98,15 +103,39 @@
         </button>
     </div>    
 
+    <div class="info">
+        <img src="imgs/info.png">
+        </div>
+
     <div class="home">
         <a href="../intro/index.html">
             <img src="imgs/homebutton.png">
+        </div>
     <audio id="bgm" src="imgs/bgm.mp3" loop></audio>
+
+
 
     <div class="card">
         <a href="../newpoke copy/index.html">
             <img src="imgs/card.png">
+        </div>
 
+        <div class="info-box">
+            <div class="info-content">
+                <h2>How to Build a Pikachu</h2>
+                <p>Follow these steps to create your own custom Pikachu:</p>
+                <ol>
+                    <li>Select your color</li>
+                    <img src="imgs/infocolor.png" alt="Select your color">
+                    <li>Choose an expression</li>
+                    <img src="imgs/infoface.png" alt="Choose an expression">
+                    <li>Pick a background</li>
+                    <img src="imgs/infoback.png" alt="Pick a background">
+                    <li>Download your custom Pikachu!</li>
+                </ol>
+            </div>
+        </div>
+        
     <script src="script.js"></script>
 </body>
 </html>

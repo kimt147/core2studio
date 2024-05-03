@@ -64,8 +64,8 @@ function toggleOptions(option) {
 function playSound(expression) {
     var audio;
     switch(expression) {
-        case 'evil':
-            audio = document.getElementById('evilSound');
+        case 'angry':
+            audio = document.getElementById('angrySound');
             break;
         case 'kind':
             audio = document.getElementById('kindSound');
@@ -79,6 +79,9 @@ function playSound(expression) {
         case 'sleepy':
             audio = document.getElementById('sleepySound');
             break;
+            case 'evil':
+                audio = document.getElementById('evilSound');
+                break;
         default:
             return;
     }
@@ -166,4 +169,14 @@ function adjustBackgroundMusicVolume(volume) {
 }
 
 // 호출하는 곳에서 볼륨을 조정할 수 있습니다. 0.5는 절반 볼륨을 나타냅니다.
-adjustBackgroundMusicVolume(0.5);
+adjustBackgroundMusicVolume(0.3);
+
+// JavaScript
+
+// info 버튼 클릭 시 정보 상자 표시/숨기기 이벤트 처리
+var infoButton = document.querySelector('.info img');
+var infoBox = document.querySelector('.info-box');
+
+infoButton.addEventListener('click', function() {
+    infoBox.classList.toggle('show');
+});

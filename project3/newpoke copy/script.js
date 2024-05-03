@@ -39,7 +39,6 @@ function displayTypeImage(type) {
     img.style.display = "block"; // 이미지 표시
 }
 
-
 // Event listener for type selection change
 document.getElementById("typeSelect").addEventListener("change", function() {
     const selectedType = this.value;
@@ -100,3 +99,4 @@ function adjustBackgroundMusicVolume(volume) {
 // 호출하는 곳에서 볼륨을 조정할 수 있습니다. 0.5는 절반 볼륨을 나타냅니다.
 adjustBackgroundMusicVolume(0.5);
 
+document.getElementById("bgm").volume = 0.5; // 배경 음악 볼륨 설정

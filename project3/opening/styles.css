@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('imgs/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    color: #3d3d3d;
+  }
+  
+  .container {
+    position: relative;
+    font-family: Pokemon Classic, sans-serif;
+    z-index: 999;
+    position: fixed;
+    top: 81%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    width: 70%;
+    opacity: 0; /* 텍스트를 처음에 보이지 않도록 투명도를 0으로 설정합니다. */
+    animation: fadeIn 2s ease forwards; /* 텍스트가 부드럽게 등장하는 애니메이션을 적용합니다. */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* 처음에는 완전히 투명합니다. */
+    }
+    to {
+      opacity: 1; /* 나타나는 동안 투명도를 1로 설정하여 완전히 보이도록 합니다. */
+    }
+  }
+
+  /* 글자 나타내는 애니메이션 설정 */
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .reveal {
+    animation: reveal 0.5s ease forwards;
+    display: inline-block;
+  }
+  
+  
+  .center-image {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+  }
+  
+  .bottom-image {
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+  
+  .button-image{
+    position: fixed;
+    left: 93%;
+    top: 5%;
+    width: 3%;
+    z-index: 2;
+  }
+
+  .button-image {
+    transition: transform 0.3s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+  
+  }
+  
+  .button-image:hover {
+    transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+  }
