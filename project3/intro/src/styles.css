@@ -64,12 +64,14 @@ canvas {
   z-index: 2;
   transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
 
+
 }
 
 .pokebal img{
   top: 30%; /* Adjust the initial top position for image1 */
   right: 66%; /* Adjust the initial left position for image1 */
   z-index: 4;
+  width: 120px;
 }
 
 .ash {
@@ -96,7 +98,7 @@ canvas {
 }
 
 .card {
-  top: 45%;
+  top: 48%;
   right: 80%;
   z-index: 3;
 }
