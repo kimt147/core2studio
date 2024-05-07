@@ -1,5 +1,3 @@
-// script.js
-
 var currentColor = 'default'; // Default color
 var currentBackground = 'forest'; // Default background
 
@@ -179,12 +177,4 @@ function scrollLeft() {
 
 function scrollRight() {
     window.scrollBy(100, 0); // 페이지를 오른쪽으로 100px 스크롤
-}
-
-function downloadImage() {
-    var pikachuImg = document.getElementById('pikachu');
-    var downloadLink = document.createElement('a');
-    downloadLink.href = pikachuImg.src; // 선택된 피카츄 이미지의 소스로 설정
-    downloadLink.download = 'your_pikachu.png'; // 파일명 설정
-    downloadLink.click();
 }
