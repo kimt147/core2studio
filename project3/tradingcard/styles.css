@@ -379,7 +379,7 @@
     .button-wrapper {
         position: fixed;
         top: 50px;
-        left: 42%; /* 왼쪽 상단에 위치하도록 변경 */
+        left: 45%; /* 왼쪽 상단에 위치하도록 변경 */
         display: flex;
         flex-direction: row;
         background-color: transparent;
@@ -401,7 +401,7 @@
     .home {
         position: fixed;
         top: 50px; /* 버튼이 보여야 할 위치로 수정 */
-        left: 20%; /* 버튼이 보여야 할 위치로 수정 */
+        left: 22%; /* 버튼이 보여야 할 위치로 수정 */
     }
     
     .home img {
@@ -418,7 +418,7 @@
     .info {
         position: fixed;
         top: 50px; /* 버튼이 보여야 할 위치로 수정 */
-        left: 32%; /* 버튼이 보여야 할 위치로 수정 */
+        left: 34%; /* 버튼이 보여야 할 위치로 수정 */
     }
     
     .info img {
