@@ -9,6 +9,10 @@ const resultText = document.getElementById('result-text'); // 결과 메시지 �
 const replayBtn = document.getElementById('replay-btn'); // 다시 시작하기 버튼
 const timerElement = document.getElementById('time-left'); // 타이머 표시용 span
 const timerDiv = document.getElementById('timer'); // 타이머 div
+const homeButton = document.querySelector('.home'); // 홈 버튼
+const infoButton = document.querySelector('.info'); // 정보 버튼
+const homeButtonImages = document.querySelectorAll('.home img'); // 홈 버튼 이미지
+const infoButtonImages = document.querySelectorAll('.info img'); // 정보 버튼 이미지
 let score = 0;
 let pikachuImage;
 let timer;
@@ -81,26 +85,23 @@ function updateScore() {
     });
 }
 
-function handleClick(event) {
-    const target = event.target;
-    if (target === pikachuImage) {
-        updateScore();
-        playClickSound(); // 클릭 소리 재생
-        rearrangePokemon();
-    }
-}
-
-function playClickSound() {
-    clickSound.currentTime = 0; // 음향 파일을 처음부터 재생
-    clickSound.play(); // 클릭 소리 재생
-}
-
-// init() 함수에서 score 초기화 부분을 삭제합니다.
 async function init() {
     logoImage.addEventListener('click', startGame); // 로고를 클릭하면 게임을 시작하는 이벤트 리스너 추가
 }
 
 async function startGame() {
+    // 홈 버튼과 정보 버튼 숨기기
+    homeButton.style.display = 'none';
+    infoButton.style.display = 'none';
+
+    // 홈 버튼 이미지와 정보 버튼 이미지 숨기기
+    homeButtonImages.forEach(image => {
+        image.style.display = 'none';
+    });
+    infoButtonImages.forEach(image => {
+        image.style.display = 'none';
+    });
+
     logoImage.style.display = 'none'; // 로고 감춤
     score = 0; // 점수를 0으로 초기화
     scoreElement.textContent = '0'; // 화면에 표시된 점수도 초기화
@@ -129,9 +130,53 @@ async function startGame() {
     pikachuImage.style.zIndex = '999'; // Set the z-index of Pikachu to maximum
     gameContainer.appendChild(pikachuImage);
 
+    // 화면 너비에 따라 포켓몬 수와 크기 결정
+    let pokemonCount = 0;
+    let pokemonSize = 0;
+    if (window.innerWidth < 768) { // 휴대폰에서만 조절하도록
+        pokemonCount = 5; // 휴대폰 화면에서는 포켓몬 수를 줄임
+        pokemonSize = 150;
+    } else {
+        if (score < 3) {
+            pokemonCount = 10;
+            pokemonSize = 150;
+        } else if (score < 6) {
+            pokemonCount = 20;
+            pokemonSize = 100;
+        } else if (score < 7) {
+            pokemonCount = 30;
+            pokemonSize = 100;
+        } else if (score < 8) {
+            pokemonCount = 40;
+            pokemonSize = 100;
+        } else if (score < 9) {
+            pokemonCount = 50;
+            pokemonSize = 100;
+        } else if (score < 10) {
+            pokemonCount = 60;
+            pokemonSize = 100;
+        } else if (score < 11) {
+            pokemonCount = 70;
+            pokemonSize = 100;
+        }
+    }
+
     // 초기 포켓몬 등장
-    updateScore(); // 초기 포켓몬 등장과 스코어 업데이트를 한번에 수행합니다.
-    gameContainer.addEventListener('click', handleClick);
+    loadRandomPokemonImages(pokemonCount).then(pokemonImages => {
+        pokemonImages.forEach(image => {
+            const position = getRandomPosition();
+            image.style.left = `${position.x}px`;
+            image.style.top = `${position.y}px`;
+            image.style.width = `${pokemonSize}px`;
+            image.style.height = `${pokemonSize}px`;
+            gameContainer.appendChild(image);
+        });
+    });
+    
+    // 게임 진행 코드...
+
+    // 피카츄 이미지에 클릭 이벤트 리스너 등록
+    pikachuImage.addEventListener('click', handleClick);
 
     // 게임이 시작되면 타이머를 보이게 합니다.
     timerDiv.style.display = 'block';
@@ -148,6 +193,19 @@ async function startGame() {
     }, 1000);
 }
 
+function handleClick(event) {
+    // 클릭된 대상이 피카츄 이미지인지 확인
+    if (event.target === pikachuImage) {
+        updateScore();
+        playClickSound(); // 클릭 소리 재생
+        rearrangePokemon();
+    }
+}
+
+function playClickSound() {
+    clickSound.currentTime = 0; // 음향 파일을 처음부터 재생
+    clickSound.play(); // 클릭 소리 재생
+}
 
 function rearrangePokemon() {
     const pokemons = document.querySelectorAll('.pokemon');
@@ -183,7 +241,12 @@ function endGame() {
 
     // 배경 이미지 변경
     document.body.style.backgroundImage = "url('imgs/background2.jpg')";
+    
+    // 홈 버튼과 정보 버튼 보이기
+    homeButton.style.display = 'block';
+    infoButton.style.display = 'block';
 }
+
 
 replayBtn.addEventListener('click', () => {
     // 게임 초기화
@@ -201,6 +264,7 @@ replayBtn.addEventListener('click', () => {
     bgm.currentTime = 0.8;
     bgm.play();
 });
+
 
 
 init();

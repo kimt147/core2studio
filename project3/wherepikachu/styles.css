@@ -1,21 +1,21 @@
 #score {
     position: absolute;
-    top: 20px;
+    top: 17px;
     left: 20px;
-    font-family: 'Arial', sans-serif; /* 폰트 지정 */
-    font-size: 24px;
+    font-family: Pokemon Classic;
+    font-size: 20px;
+    text-align: center;
     color: white;
-    text-align: left;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
     z-index: 999;
 }
 
 #timer {
     position: absolute;
-    top: 20px;
-    left: 150px;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
+    top: 22px;
+    left: 210px;
+    font-family: Pokemon Classic;
+    font-size: 20px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 999;
@@ -27,7 +27,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    border: 2px solid #000;
     overflow: hidden;
 }
 
@@ -38,14 +37,13 @@
 
 #score {
     text-align: center;
-    font-family: 'Arial', sans-serif;
     font-size: 24px;
     color: white;
     display: none;
 }
 
 #logo {
-    width: 25%;
+    width: 25rem;
     cursor: pointer;
     position: absolute;
     top: 45%;
@@ -63,20 +61,24 @@
     border-radius: 10px;
     display: none;
     z-index: 2;
+    color: black;
+    font-family: Pokemon Classic;
 }
 
 #replay-btn {
     display: block;
+    margin: 0 auto; /* 수평 가운데 정렬 */
     margin-top: 10px;
     padding: 5px 10px;
-    background-color: #4CAF50;
+    background-color: #1c5acb;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Arial', sans-serif;
+    font-family: Pokemon Classic;
     font-size: 16px;
 }
+
 
 /* 추가된 스타일 */
 body {
@@ -128,4 +130,88 @@ body {
 
 .info img:hover {
     transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+}
+
+@media only screen and (max-width: 375px) {
+
+    #logo {
+        width: 21rem;
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #score {
+        position: absolute;
+        top: 95%;
+        left: 20px;
+        font-family: Pokemon Classic;
+        font-size: 15px;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+        z-index: 999;
+    }
+    
+    #timer {
+        position: absolute;
+        top: 95.5%;
+        left: 140px;
+        font-family: Pokemon Classic;
+        font-size: 12px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    #result {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        display: none;
+        z-index: 2;
+        color: black;
+        font-size: 11px;
+        font-family: Pokemon Classic;
+    }
+
+    .home {
+        position: fixed;
+        top: 50px; /* 버튼이 보여야 할 위치로 수정 */
+        left: 38%; /* 버튼이 보여야 할 위치로 수정 */
+    }
+    
+    .home img {
+        width: 10vw;
+        height: auto;
+        transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+    
+    }
+    
+    .home img:hover {
+        transform: none;}
+
+    
+    .info {
+        position: fixed;
+        top: 50px; /* 버튼이 보여야 할 위치로 수정 */
+        left: 53%; /* 버튼이 보여야 할 위치로 수정 */
+    }
+    
+    .info img {
+        width: 10vw;
+        height: auto;
+    
+    }
+    
+    .info img:hover {
+        transform: none;
+    }
 }
