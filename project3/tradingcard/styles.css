@@ -1,3 +1,66 @@
+.input-box {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 630px;
+    left: 70.7%;
+    z-index: 999;
+    font-family: PP Mondwest;
+}
+
+#textInput {
+    font-family: 'PP Mondwest', sans-serif;
+    font-size: 1rem;
+}
+
+#textDisplay {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    overflow-y: auto;
+    font-family: PP NeueBit, sans-serif;
+    position: absolute;
+    top: 1.3rem;
+    left: 2rem;
+    z-index: 4;
+    font-weight: 500;
+    font-size: 2rem;
+    backface-visibility: hidden;
+    text-transform: uppercase;
+    text-shadow: 
+        -0.15px -0.15px 0 #000,  
+        0.15px -0.15px 0 #000,
+        -0.15px  0.15px 0 #000,
+        0.15px  0.15px 0 #000;
+}
+
+#imageUpload {
+    position: absolute;
+    top: 480px;
+    left: 71%;
+    width: 200px;
+    font-family: PP Mondwest;
+}
+
+#uploadedImage img {
+    width: 400px;
+    height: 220px;
+    margin-top: 19px;
+    position: absolute;
+    top: 2.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    backface-visibility: hidden;
+    z-index: 0;
+}
+
+#uploadedImage {
+    backface-visibility: hidden;
+}
+
+.custom-file-upload {
+    font-family: PP Mondwest;
+}
+
 .moveContainer {
     position: absolute;
     z-index: 2;
@@ -21,9 +84,6 @@
     font-size: 1rem;
     text-align: center;
     
-}
-
-.selecting{
 }
 
 .typeb img {
@@ -268,9 +328,6 @@
     background: none; /* 배경 제거 */
 }
 
-.back{
-}
-
 .front{
     z-index: 4;
 }
@@ -506,7 +563,7 @@
     }
     
     .moveName, .moveEffect {
-        width: 90%; /* moveDetails에 대해 상대적인 너비 */
+        width: 90%;
     }
     
     .moveName {
