@@ -135,3 +135,23 @@ function downloadImage() {
     });
   }
 }
+function displayText() {
+  var inputText = document.getElementById("textInput").value;
+  var textDisplay = document.getElementById("textDisplay");
+  textDisplay.textContent = inputText;
+}
+
+function displayImage(input) {
+  var file = input.files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+      var img = new Image();
+      img.src = e.target.result;
+      img.onload = function() {
+          var uploadedImage = document.getElementById("uploadedImage");
+          uploadedImage.innerHTML = "";
+          uploadedImage.appendChild(img);
+      }
+  }
+  reader.readAsDataURL(file);
+}
