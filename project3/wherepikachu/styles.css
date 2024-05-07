@@ -10,6 +10,27 @@
     z-index: 999;
 }
 
+@font-face {
+    font-family: 'Pokemon Classic';
+    font-style: normal;
+    font-weight: normal;
+    src:local('Pokemon Classic'), url('pokemon_classic-webfont.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'PP Mondwest';
+    font-style: normal;
+    font-weight: normal;
+    src:local('PP Mondwest'), url('ppmondwest-regular-webfont.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'PP NeueBit';
+    font-style: normal;
+    font-weight: normal;
+    src:local('PP NeueBit'), url('ppneuebit-bold-webfont.woff') format('woff')
+}
+
 #timer {
     position: absolute;
     top: 22px;

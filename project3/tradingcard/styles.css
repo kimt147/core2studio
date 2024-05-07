@@ -9,6 +9,27 @@
     font-family: PP Mondwest;
 }
 
+@font-face {
+    font-family: 'Pokemon Classic';
+    font-style: normal;
+    font-weight: normal;
+    src:local('Pokemon Classic'), url('pokemon_classic-webfont.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'PP Mondwest';
+    font-style: normal;
+    font-weight: normal;
+    src:local('PP Mondwest'), url('ppmondwest-regular-webfont.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'PP NeueBit';
+    font-style: normal;
+    font-weight: normal;
+    src:local('PP NeueBit'), url('ppneuebit-regular-webfont.woff') format('woff')
+}
+
 #textInput {
     font-family: 'PP Mondwest', sans-serif;
     font-size: 1rem;
