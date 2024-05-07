@@ -95,7 +95,6 @@ function downloadImage() {
     // Pikachu 이미지와 배경 이미지의 요소 가져오기
     var pikachuImg = document.getElementById('pikachu');
     var backgroundImg = document.getElementById('background-img');
-    var shadowImg = document.getElementById('shadow');
 
     // Canvas 크기를 배경 이미지의 크기로 설정
     canvas.width = backgroundImg.width;
@@ -122,16 +121,9 @@ function downloadImage() {
 
     ctx.drawImage(backgroundImg, offsetX, offsetY, renderWidth, renderHeight);
 
-    // Shadow 이미지의 가운데 좌표 계산
-    var shadowX = (canvas.width - shadowImg.width) / 2 - 25; // 왼쪽으로 이동
-    var shadowY = (canvas.height - pikachuImg.height) / 2 + pikachuImg.height - 55; // 피카츄 아래에 위치
-
     // Pikachu 이미지의 가운데 좌표 계산
     var pikachuX = (canvas.width - pikachuImg.width) / 2;
     var pikachuY = (canvas.height - pikachuImg.height) / 2 + 30; // 살짝 아래로 이동
-
-    // Shadow 이미지 그리기
-    ctx.drawImage(shadowImg, shadowX, shadowY, shadowImg.width, shadowImg.height);
 
     // Pikachu 이미지 그리기
     ctx.drawImage(pikachuImg, pikachuX, pikachuY, pikachuImg.width, pikachuImg.height);
@@ -139,7 +131,7 @@ function downloadImage() {
     // Canvas를 이미지로 변환하고 다운로드 링크 생성
     var downloadLink = document.createElement('a');
     downloadLink.href = canvas.toDataURL('image/jpeg'); // jpg 형식으로 설정
-    downloadLink.download = 'custom_pikachu.jpg'; // 파일명 설정
+    downloadLink.download = 'your_pikachu.jpg'; // 파일명 설정
     downloadLink.click();
 }
 
@@ -180,3 +172,19 @@ var infoBox = document.querySelector('.info-box');
 infoButton.addEventListener('click', function() {
     infoBox.classList.toggle('show');
 });
+
+function scrollLeft() {
+    window.scrollBy(-100, 0); // 페이지를 왼쪽으로 100px 스크롤
+}
+
+function scrollRight() {
+    window.scrollBy(100, 0); // 페이지를 오른쪽으로 100px 스크롤
+}
+
+function downloadImage() {
+    var pikachuImg = document.getElementById('pikachu');
+    var downloadLink = document.createElement('a');
+    downloadLink.href = pikachuImg.src; // 선택된 피카츄 이미지의 소스로 설정
+    downloadLink.download = 'your_pikachu.png'; // 파일명 설정
+    downloadLink.click();
+}
