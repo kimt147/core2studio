@@ -27,7 +27,7 @@
     font-family: 'PP NeueBit';
     font-style: normal;
     font-weight: normal;
-    src:local('PP NeueBit'), url('ppneuebit-regular-webfont.woff') format('woff')
+    src:local('PP NeueBit'), url('ppneuebit-bold-webfont.woff') format('woff')
 }
 
 #textInput {

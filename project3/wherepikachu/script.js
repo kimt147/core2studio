@@ -193,10 +193,10 @@ function endGame() {
     document.body.style.backgroundImage = "url('imgs/background2.jpg')";
     
     // 홈 버튼과 정보 버튼 보이기
-    homeButton.style.display = 'block';
+    console.log("홈 버튼을 보이게 합니다.");
+    homeButton.style.display = 'block'; // 이 부분을 추가하면 홈 버튼이 보이게 됩니다.
     infoButton.style.display = 'block';
 }
-
 replayBtn.addEventListener('click', () => {
     gameContainer.innerHTML = '';
     score = 0;
@@ -214,6 +214,11 @@ replayBtn.addEventListener('click', () => {
 });
 
 init();
+
+// info 버튼 클릭 시 정보 상자 표시/숨기기 이벤트 처리
+homeButton.addEventListener('click', function() {
+    infoBox.classList.toggle('show');
+});
 
 // info 버튼 클릭 시 정보 상자 표시/숨기기 이벤트 처리
 infoButton.addEventListener('click', function() {
