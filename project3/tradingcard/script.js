@@ -155,3 +155,19 @@ function displayImage(input) {
   }
   reader.readAsDataURL(file);
 }
+
+// info 버튼 클릭 시 정보 상자 표시/숨기기 이벤트 처리
+var infoButton = document.querySelector('.info img');
+var infoBox = document.querySelector('.info-box');
+
+infoButton.addEventListener('click', function() {
+    infoBox.classList.toggle('show');
+});
+
+function scrollLeft() {
+    window.scrollBy(-100, 0); // 페이지를 왼쪽으로 100px 스크롤
+}
+
+function scrollRight() {
+    window.scrollBy(100, 0); // 페이지를 오른쪽으로 100px 스크롤
+}

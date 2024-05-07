@@ -12,7 +12,7 @@ const timerDiv = document.getElementById('timer'); // 타이머 div
 const homeButton = document.querySelector('.home'); // 홈 버튼
 const infoButton = document.querySelector('.info'); // 정보 버튼
 const homeButtonImages = document.querySelectorAll('.home img'); // 홈 버튼 이미지
-const infoButtonImages = document.querySelectorAll('.info img'); // 정보 버튼 이미지
+const infoBox = document.querySelector('.info-box'); // 정보 상자
 let score = 0;
 let pikachuImage;
 let timer;
@@ -98,20 +98,20 @@ async function startGame() {
     homeButtonImages.forEach(image => {
         image.style.display = 'none';
     });
-    infoButtonImages.forEach(image => {
-        image.style.display = 'none';
-    });
+    
+    // 로고 이미지 감추기
+    logoImage.style.display = 'none';
 
-    logoImage.style.display = 'none'; // 로고 감춤
-    score = 0; // 점수를 0으로 초기화
-    scoreElement.textContent = '0'; // 화면에 표시된 점수도 초기화
-    scoreDiv.style.display = 'block'; // 스코어 div 표시
-    gameContainer.style.display = 'block'; // 게임 컨테이너 표시
-    resultDiv.style.display = 'none'; // 결과 표시 숨기기
-    timerDiv.style.display = 'none'; // 타이머 숨기기
-    bgm.volume = 0.3; // 배경 음악 볼륨 설정
-    bgm.currentTime = 0.8; // 배경 음악 재생 시간 설정
-    bgm.play(); // 배경 음악 재생
+    // 스코어 초기화
+    score = 0;
+    scoreElement.textContent = '0';
+    scoreDiv.style.display = 'block';
+    gameContainer.style.display = 'block';
+    resultDiv.style.display = 'none';
+    timerDiv.style.display = 'none';
+    bgm.volume = 0.3;
+    bgm.currentTime = 0.8;
+    bgm.play();
 
     // 배경 이미지 변경
     document.body.style.backgroundImage = "url('imgs/background2.jpg')";
@@ -121,58 +121,12 @@ async function startGame() {
     pikachuImage.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png';
     pikachuImage.classList.add('pokemon');
     pikachuImage.style.position = 'absolute';
-    
-    // 랜덤으로 초기 위치 설정
     const position = getRandomPosition();
     pikachuImage.style.left = `${position.x}px`;
     pikachuImage.style.top = `${position.y}px`;
-    
-    pikachuImage.style.zIndex = '999'; // Set the z-index of Pikachu to maximum
+    pikachuImage.style.zIndex = '999';
     gameContainer.appendChild(pikachuImage);
 
-    // 화면 너비에 따라 포켓몬 수와 크기 결정
-    let pokemonCount = 0;
-    let pokemonSize = 0;
-    if (window.innerWidth < 768) { // 휴대폰에서만 조절하도록
-        pokemonCount = 5; // 휴대폰 화면에서는 포켓몬 수를 줄임
-        pokemonSize = 150;
-    } else {
-        if (score < 3) {
-            pokemonCount = 10;
-            pokemonSize = 150;
-        } else if (score < 6) {
-            pokemonCount = 20;
-            pokemonSize = 100;
-        } else if (score < 7) {
-            pokemonCount = 30;
-            pokemonSize = 100;
-        } else if (score < 8) {
-            pokemonCount = 40;
-            pokemonSize = 100;
-        } else if (score < 9) {
-            pokemonCount = 50;
-            pokemonSize = 100;
-        } else if (score < 10) {
-            pokemonCount = 60;
-            pokemonSize = 100;
-        } else if (score < 11) {
-            pokemonCount = 70;
-            pokemonSize = 100;
-        }
-    }
-
-    // 초기 포켓몬 등장
-    loadRandomPokemonImages(pokemonCount).then(pokemonImages => {
-        pokemonImages.forEach(image => {
-            const position = getRandomPosition();
-            image.style.left = `${position.x}px`;
-            image.style.top = `${position.y}px`;
-            image.style.width = `${pokemonSize}px`;
-            image.style.height = `${pokemonSize}px`;
-            gameContainer.appendChild(image);
-        });
-    });
-    
     // 게임 진행 코드...
 
     // 피카츄 이미지에 클릭 이벤트 리스너 등록
@@ -185,7 +139,7 @@ async function startGame() {
     let timeLeft = 30;
     timer = setInterval(() => {
         timeLeft--;
-        timerElement.textContent = timeLeft; // 남은 시간 업데이트
+        timerElement.textContent = timeLeft;
         if (timeLeft === 0) {
             clearInterval(timer);
             endGame();
@@ -194,17 +148,16 @@ async function startGame() {
 }
 
 function handleClick(event) {
-    // 클릭된 대상이 피카츄 이미지인지 확인
     if (event.target === pikachuImage) {
         updateScore();
-        playClickSound(); // 클릭 소리 재생
+        playClickSound();
         rearrangePokemon();
     }
 }
 
 function playClickSound() {
-    clickSound.currentTime = 0; // 음향 파일을 처음부터 재생
-    clickSound.play(); // 클릭 소리 재생
+    clickSound.currentTime = 0;
+    clickSound.play();
 }
 
 function rearrangePokemon() {
@@ -217,8 +170,8 @@ function rearrangePokemon() {
 }
 
 function endGame() {
-    gameContainer.removeEventListener('click', handleClick); // 클릭 이벤트 리스너 제거
-    clearInterval(timer); // 타이머 중지
+    gameContainer.removeEventListener('click', handleClick);
+    clearInterval(timer);
 
     // 피카츄 위치 표시
     const pikachuPosition = pikachuImage.getBoundingClientRect();
@@ -230,16 +183,13 @@ function endGame() {
     circle.style.height = `${pikachuPosition.height}px`;
     circle.style.border = '4px solid red';
     circle.style.borderRadius = '50%';
-    circle.style.zIndex = '9999'; // z-index를 최대로 설정
+    circle.style.zIndex = '9999';
     gameContainer.appendChild(circle);
 
     resultText.textContent = `You scored: ${score}`;
-    resultDiv.style.display = 'block'; // 결과 표시
+    resultDiv.style.display = 'block';
 
-    // 배경 음악 중지
     bgm.pause();
-
-    // 배경 이미지 변경
     document.body.style.backgroundImage = "url('imgs/background2.jpg')";
     
     // 홈 버튼과 정보 버튼 보이기
@@ -247,24 +197,25 @@ function endGame() {
     infoButton.style.display = 'block';
 }
 
-
 replayBtn.addEventListener('click', () => {
-    // 게임 초기화
-    gameContainer.innerHTML = ''; // 게임 컨테이너 비우기
-    score = 0; // 점수 초기화
-    scoreElement.textContent = '0'; // 화면에 표시된 점수도 초기화
-    resultDiv.style.display = 'none'; // 결과 표시 숨기기
-    startGame(); // 다시 시작
+    gameContainer.innerHTML = '';
+    score = 0;
+    scoreElement.textContent = '0';
+    resultDiv.style.display = 'none';
+    startGame();
 
-    // 배경 이미지 변경 (수정된 부분)
+    // 배경 이미지 변경
     document.body.style.backgroundImage = "url('imgs/background2.jpg')";
-    document.body.style.backgroundSize = 'cover'; // 배경 이미지를 창에 꽉 채우도록 설정
+    document.body.style.backgroundSize = 'cover';
 
     // 배경 음악 다시 재생
     bgm.currentTime = 0.8;
     bgm.play();
 });
 
-
-
 init();
+
+// info 버튼 클릭 시 정보 상자 표시/숨기기 이벤트 처리
+infoButton.addEventListener('click', function() {
+    infoBox.classList.toggle('show');
+});

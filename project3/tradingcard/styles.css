@@ -1,3 +1,5 @@
+
+
 .input-box {
     margin-bottom: 20px;
     position: absolute;
@@ -134,16 +136,17 @@
     width: 60%;
     position: absolute;
     z-index: 1;
+    font-size: 1rem; /* 원하는 폰트 크기로 조정 */
 }
 
 .moveDetails1 {
+    position: absolute;
     top: 18.5rem;
     left: 5%;
     width: 100%;
     z-index: 3;
     font-family: PP NeueBit, sans-serif;
     backface-visibility: hidden;
-
 }
 
 .moveDetails2 {
@@ -159,10 +162,9 @@
     width: 90%; /* moveDetails에 대해 상대적인 너비 */
 }
 
+
 .moveName {
     font-weight: 500;
-    font-size: 1.2rem;
-    
     text-transform: uppercase; /* 모든 텍스트를 대문자로 변환 */
     text-shadow: 
         -0.15px -0.15px 0 #000,  
@@ -347,6 +349,57 @@
     height: auto;
 }
 
+.info-box {
+    position: fixed;
+    top: 140px;
+    left: 84%;
+    transform: translateX(-50%);
+    width: 25%;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    display: none; /* 초기에는 숨김 */
+    font-family: Pokemon Classic;
+}
+
+.info-box.show {
+    display: block; /* 보여질 때만 표시 */
+}
+
+.info-content {
+    text-align: left;
+}
+
+.info-content h2 {
+    margin-top: 0;
+}
+
+.info-content ol {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.info-content img {
+    display: block;
+    margin: 10px auto; /* 이미지를 가운데 정렬합니다. */
+    max-width: 100%; /* 이미지가 너무 크면 부모 요소에 맞게 크기를 조정합니다. */
+}
+
+.step-title{
+    font-size: 1rem;
+}
+
+.step{
+    font-size: 0.8rem;
+}
+
+ol{
+    font-size: 0.7rem;
+}
 
      
 @media only screen and (max-width: 375px) {
@@ -440,7 +493,6 @@
         position: absolute; /* 절대 위치 지정 */
         top: 455px; /* 원하는 위치로 조정 */
         left: 15%; /* 원하는 위치로 조정 */
-        z-index: 999;
     }
     
     #typeSelect {
@@ -449,7 +501,6 @@
         font-family: PP Mondwest;
         font-size: 0.8rem;
         text-align: center;
-        z-index: 999;
     }
     
     #typeSelect {
@@ -467,7 +518,6 @@
         position: absolute; /* 절대 위치 지정 */
         top: 455px; /* 원하는 위치로 조정 */
         left: 65%; /* 원하는 위치로 조정 */
-        z-index: 999;
     }
     
     .moveb img {
@@ -567,7 +617,7 @@
     }
     
     .moveName {
-        font-size: 0.5rem;
+        font-size: 2rem;
     }
     
     .moveEffect {
@@ -595,4 +645,58 @@
             -0.15px  0.15px 0 #000,
             0.15px  0.15px 0 #000;
     }
+
+    .info-box {
+        position: fixed;
+        top: 100px;
+        left: 43%;
+        transform: translateX(-50%);
+        width: 70%;
+        max-width: 600px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: black;
+        display: none; /* 초기에는 숨김 */
+        font-family: Pokemon Classic;
+        z-index: 1000;
+    }
+    
+    .info-box.show {
+        display: block; /* 보여질 때만 표시 */
+    }
+    
+    .info-content {
+        text-align: left;
+    }
+    
+    .info-content h2 {
+        margin-top: 0;
+    }
+    
+    .info-content ol {
+        margin-top: 0;
+        padding-left: 20px;
+    }
+    
+    .info-content img {
+        display: block;
+        margin: 10px auto; /* 이미지를 가운데 정렬합니다. */
+        max-width: 100%; /* 이미지가 너무 크면 부모 요소에 맞게 크기를 조정합니다. */
+    }
+    
+    h2{
+        font-size: 0.8rem;
+    }
+    
+    p{
+        font-size: 0.5rem;
+    }
+    
+    ol{
+        font-size: 0.7rem;
+    }
 }
+

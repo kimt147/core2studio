@@ -143,7 +143,7 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; /* 가운데 정렬 추가 */
-    top: 21%;
+    top: 19%;
     gap: 30px; /* 간격 조절 */
 }
 
@@ -468,5 +468,57 @@ ol{
 #expressionBtn img {
     width: 60%; /* 이미지 너비를 더 크게 설정 */
     height: auto; /* 이미지 높이를 자동으로 조절하여 비율 유지 */
+}
+
+.info-box {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    display: none; /* 초기에는 숨김 */
+    font-family: Pokemon Classic;
+}
+
+.info-box.show {
+    display: block; /* 보여질 때만 표시 */
+}
+
+.info-content {
+    text-align: left;
+}
+
+.info-content h2 {
+    margin-top: 0;
+}
+
+.info-content ol {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.info-content img {
+    display: block;
+    margin: 10px auto; /* 이미지를 가운데 정렬합니다. */
+    max-width: 100%; /* 이미지가 너무 크면 부모 요소에 맞게 크기를 조정합니다. */
+}
+
+h2{
+    font-size: 0.8rem;
+}
+
+p{
+    font-size: 0.5rem;
+}
+
+ol{
+    font-size: 0.7rem;
 }
 }
