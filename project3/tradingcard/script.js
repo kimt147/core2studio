@@ -118,16 +118,6 @@ document
   .querySelector(".button-download")
   .addEventListener("click", () => downloadImage());
 
-  // Event listener for type dropdown
-document.getElementById("typeDropdownContent").addEventListener("click", function (event) {
-  if (event.target.classList.contains("dropdown-item")) {
-      const selectedType = event.target.getAttribute("data-value");
-      fetchMovesByType(selectedType);
-      displayTypeImage(selectedType);
-  }
-});
-
-
 var isDownloading = false; // 다운로드 중 여부를 나타내는 변수
 
 function downloadImage() {

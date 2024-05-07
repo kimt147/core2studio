@@ -290,272 +290,237 @@
     height: auto;
 }
 
+
      
-    @media only screen and (max-width: 375px) {
-        .logo-container img {
-            width: 35%; /* 로고 이미지의 너비를 조정합니다. */
-            height: auto; /* 높이는 자동으로 조정됩니다. */
-            margin-right: 67px;
-            margin-top: 1px;
-        }
-
-        .flip-container {
-            perspective: 1000px;
-            position: relative;
-            display: inline-block;
-            width: 200px;
-            height: 275px;
-            margin-top: -95px !important; /* 요소를 위로 이동시킵니다. */
-        }
-
-        .button-download img {
-            width: 10vw;
-            height: auto;
-        }
-        
-        .button-wrapper .button img {
-            width: 10vw;
-            height: auto;
-        }
-        
-        .button-wrapper {
-            position: fixed;
-            top: 50px;
-            left: 42%; /* 왼쪽 상단에 위치하도록 변경 */
-            display: flex;
-            flex-direction: row;
-            background-color: transparent;
-        }
-        
-        .button-wrapper .button {
-            margin-right: 0px; /* 수정된 부분 */
-            background-color: transparent;
-        }
-        
-        .button-wrapper img:hover {
-            transform: none;
-        }
-        
-        .button-wrapper img {
-            transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
-          }
-        
-        .home {
-            position: fixed;
-            top: 50px; /* 버튼이 보여야 할 위치로 수정 */
-            left: 20%; /* 버튼이 보여야 할 위치로 수정 */
-        }
-        
-        .home img {
-            width: 10vw;
-            height: auto;
-            transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
-        
-        }
-        
-        .home img:hover {
-            transform: none;}
-
-        
-        .info {
-            position: fixed;
-            top: 50px; /* 버튼이 보여야 할 위치로 수정 */
-            left: 32%; /* 버튼이 보여야 할 위치로 수정 */
-        }
-        
-        .info img {
-            width: 10vw;
-            height: auto;
-        
-        }
-        
-        .info img:hover {
-            transform: none;
-        }
-
-        .typeb img {
-            width: 80px; /* 이미지의 가로 크기를 조정 */
-            height: auto; /* 이미지의 세로 크기를 조정 */
-        }
-        
-        .typeb {
-            position: absolute; /* 절대 위치 지정 */
-            top: 455px; /* 원하는 위치로 조정 */
-            left: 15%; /* 원하는 위치로 조정 */
-            z-index: 999;
-        }
-        
-        #typeSelect {
-            width: 100px;
-            height: 25px; /* 조정된 값 */
-            font-family: PP Mondwest;
-            font-size: 0.8rem;
-            text-align: center;
-            z-index: 999;
-        }
-        
-        #typeSelect {
-            position: absolute; /* 절대 위치 지정 */
-            top: 73%; /* 원하는 위치로 조정 */
-            left: 13%; /* 원하는 위치로 조정 */
-        }
-
-        .fileb img {
-            width: 80px; /* 이미지의 가로 크기를 조정 */
-            height: auto; /* 이미지의 세로 크기를 조정 */
-        }
-        
-        .fileb {
-            position: absolute; /* 절대 위치 지정 */
-            top: 455px; /* 원하는 위치로 조정 */
-            left: 65%; /* 원하는 위치로 조정 */
-            z-index: 999;
-        }
-        
-        .moveb img {
-            width: 80px; /* 이미지의 가로 크기를 조정 */
-            height: auto; /* 이미지의 세로 크기를 조정 */
-        }
-        
-        .moveb {
-            position: absolute; /* 절대 위치 지정 */
-            top: 522px; /* 원하는 위치로 조정 */
-            left: 15%; /* 원하는 위치로 조정 */
-        }
-        
-        .nameb img {
-            width: 80px; /* 이미지의 가로 크기를 조정 */
-            height: auto; /* 이미지의 세로 크기를 조정 */
-        }
-        
-        .nameb {
-            position: absolute; /* 절대 위치 지정 */
-            top: 522px; /* 원하는 위치로 조정 */
-            left: 65%; /* 원하는 위치로 조정 */
-        }
-
-        .moveSelect {
-            width: 120px;
-            height: 30px;
-            font-family: PP Mondwest;
-            border-radius: 0px;
-            font-size: 0.8rem;
-            text-align: center;
-            
-        }
-
-        #moveContainer1 {
-            top: 83%;
-            left: 10.5%;
-        }
-        
-        #moveContainer2 {
-            top: 89%;
-            left: 10.5%;
-        }
-
-        #imageUpload {
-            position: absolute; /* 절대 위치 지정 */
-            top: 485px; /* 위에서 250px 떨어진 위치 */
-            left: 62%; /* 부모 요소의 가운데 정렬 */
-            width: 200px; /* 너비 조정 */
-            font-family: PP Mondwest;
-            font-size: 0.5rem;
-        }
-
-        #textInput {
-            font-family: 'PP Mondwest', sans-serif;
-            font-size: 0.5rem; /* 사용하고자 하는 폰트 이름을 넣어주세요 */
-            /* 기타 원하는 스타일을 여기에 추가할 수 있습니다 */
-        }
-
-        .input-box {
-            margin-bottom: 20px;
-            position: absolute; /* 절대 위치 지정 */
-            top: 550px; /* 위에서 100px 떨어진 위치 */
-            left: 62%; /* 가운데 정렬 */
-            z-index: 999;
-            font-family: PP Mondwest;
-        }
-
-
-        #uploadedImage img{
-            width: 200px; /* 이미지의 최대 가로 크기 */
-            height: 110px; /* 이미지의 최대 세로 크기 */
-            margin-top: -10px;
-            position: absolute; /* 절대 위치 지정 */
-            top: 2.3rem; /* 이미지의 상단 위치 */
-            left: 50%; /* 이미지를 가운데 정렬 */
-            transform: translateX(-50%); /* 이미지를 수평으로 가운데 정렬 */
-            backface-visibility: hidden;
-            z-index: 0;
-        }
-
-        .moveDetails {
-            width: 60%;
-            position: absolute;
-            z-index: 1;
-        }
-        
-        .moveDetails1 {
-            top: 9rem;
-            left: 5%;
-            width: 100%;
-            z-index: 3;
-            font-family: PP NeueBit, sans-serif;
-            backface-visibility: hidden;
-        
-        }
-        
-        .moveDetails2 {
-            top: 11rem;
-            left: 5%;
-            width: 100%;
-            font-family: PP NeueBit, sans-serif;
-            z-index: 3;
-            backface-visibility: hidden;
-        }
-        
-        .moveName, .moveEffect {
-            width: 90%; /* moveDetails에 대해 상대적인 너비 */
-        }
-        
-        .moveName {
-            font-weight: 500;
-            font-size: 0.5rem;
-            
-            text-transform: uppercase; /* 모든 텍스트를 대문자로 변환 */
-            text-shadow: 
-                -0.15px -0.15px 0 #000,  
-                 0.15px -0.15px 0 #000,
-                -0.15px  0.15px 0 #000,
-                 0.15px  0.15px 0 #000;
-        }
-        
-        .moveEffect {
-            top: 48%;
-            transform: translateY(-50%);
-            font-size: 0.8rem;
-        }
-
-        #textDisplay {
-            width: 200px;
-            height: 50px;
-            padding: 10px;
-            overflow-y: auto;
-            font-family: PP NeueBit, sans-serif;
-            position: absolute; /* 절대 위치 지정 */
-            top: 0.3rem; /* 위에서 145px 떨어진 위치 */
-            left: -1.2rem; /* 가운데 정렬 */
-            z-index: 4;
-            font-weight: 500;
-            font-size: 1rem;
-            backface-visibility: hidden;
-            text-transform: uppercase; /* 모든 텍스트를 대문자로 변환 */
-            text-shadow: 
-                -0.15px -0.15px 0 #000,  
-                0.15px -0.15px 0 #000,
-                -0.15px  0.15px 0 #000,
-                0.15px  0.15px 0 #000;
-        }
+@media only screen and (max-width: 375px) {
+    .logo-container img {
+        width: 35%; /* 로고 이미지의 너비를 조정합니다. */
+        height: auto; /* 높이는 자동으로 조정됩니다. */
+        margin-right: 67px;
+        margin-top: 1px;
     }
+
+    .flip-container {
+        perspective: 1000px;
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 275px;
+        margin-top: -95px !important; /* 요소를 위로 이동시킵니다. */
+    }
+
+    .button-download img {
+        width: 10vw;
+        height: auto;
+    }
+    
+    .button-wrapper .button img {
+        width: 10vw;
+        height: auto;
+    }
+    
+    .button-wrapper {
+        position: fixed;
+        top: 50px;
+        left: 42%; /* 왼쪽 상단에 위치하도록 변경 */
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+    }
+    
+    .button-wrapper .button {
+        margin-right: 0px; /* 수정된 부분 */
+        background-color: transparent;
+    }
+    
+    .button-wrapper img:hover {
+        transform: none;
+    }
+    
+    .button-wrapper img {
+        transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+      }
+    
+    .home {
+        position: fixed;
+        top: 50px; /* 버튼이 보여야 할 위치로 수정 */
+        left: 20%; /* 버튼이 보여야 할 위치로 수정 */
+    }
+    
+    .home img {
+        width: 10vw;
+        height: auto;
+        transition: transform 0.2s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+    
+    }
+    
+    .home img:hover {
+        transform: none;}
+
+    
+    .info {
+        position: fixed;
+        top: 50px; /* 버튼이 보여야 할 위치로 수정 */
+        left: 32%; /* 버튼이 보여야 할 위치로 수정 */
+    }
+    
+    .info img {
+        width: 10vw;
+        height: auto;
+    
+    }
+    
+    .info img:hover {
+        transform: none;
+    }
+
+    .typeb img {
+        width: 80px; /* 이미지의 가로 크기를 조정 */
+        height: auto; /* 이미지의 세로 크기를 조정 */
+    }
+    
+    .typeb {
+        position: absolute; /* 절대 위치 지정 */
+        top: 455px; /* 원하는 위치로 조정 */
+        left: 15%; /* 원하는 위치로 조정 */
+        z-index: 999;
+    }
+    
+    #typeSelect {
+        width: 100px;
+        height: 25px; /* 조정된 값 */
+        font-family: PP Mondwest;
+        font-size: 0.8rem;
+        text-align: center;
+        z-index: 999;
+    }
+    
+    #typeSelect {
+        position: absolute; /* 절대 위치 지정 */
+        top: 73%; /* 원하는 위치로 조정 */
+        left: 13%; /* 원하는 위치로 조정 */
+    }
+
+    .fileb img {
+        width: 80px; /* 이미지의 가로 크기를 조정 */
+        height: auto; /* 이미지의 세로 크기를 조정 */
+    }
+    
+    .fileb {
+        position: absolute; /* 절대 위치 지정 */
+        top: 455px; /* 원하는 위치로 조정 */
+        left: 65%; /* 원하는 위치로 조정 */
+        z-index: 999;
+    }
+    
+    .moveb img {
+        width: 80px; /* 이미지의 가로 크기를 조정 */
+        height: auto; /* 이미지의 세로 크기를 조정 */
+    }
+    
+    .moveb {
+        position: absolute; /* 절대 위치 지정 */
+        top: 522px; /* 원하는 위치로 조정 */
+        left: 15%; /* 원하는 위치로 조정 */
+    }
+    
+    .nameb img {
+        width: 80px; /* 이미지의 가로 크기를 조정 */
+        height: auto; /* 이미지의 세로 크기를 조정 */
+    }
+    
+    .nameb {
+        position: absolute; /* 절대 위치 지정 */
+        top: 522px; /* 원하는 위치로 조정 */
+        left: 65%; /* 원하는 위치로 조정 */
+    }
+
+    .moveSelect {
+        width: 120px;
+        height: 30px;
+        font-family: PP Mondwest;
+        border-radius: 0px;
+        font-size: 0.8rem;
+        text-align: center;
+        
+    }
+
+    #moveContainer1 {
+        top: 83%;
+        left: 10.5%;
+    }
+    
+    #moveContainer2 {
+        top: 89%;
+        left: 10.5%;
+    }
+
+    #imageUpload {
+        position: absolute; /* 절대 위치 지정 */
+        top: 485px; /* 위에서 250px 떨어진 위치 */
+        left: 62%; /* 부모 요소의 가운데 정렬 */
+        width: 200px; /* 너비 조정 */
+        font-family: PP Mondwest;
+        font-size: 0.5rem;
+    }
+
+    #textInput {
+        font-family: 'PP Mondwest', sans-serif;
+        font-size: 0.5rem;
+    }
+
+    .input-box {
+        margin-bottom: 20px;
+        top: 550px; /* 위에서 100px 떨어진 위치 */
+        left: 62%; /* 가운데 정렬 */
+        z-index: 999;
+    }
+
+
+    #uploadedImage img{
+        width: 200px; /* 이미지의 최대 가로 크기 */
+        height: 110px; /* 이미지의 최대 세로 크기 */
+        margin-top: -10px;
+        top: 2.3rem; /* 이미지의 상단 위치 */
+        left: 50%; /* 이미지를 가운데 정렬 */
+        z-index: 0;
+    }
+
+    .moveDetails {
+        width: 60%;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .moveDetails1 {
+        top: 9rem;
+        left: 5%;
+        z-index: 3;
+    
+    }
+    
+    .moveDetails2 {
+        top: 11rem;
+        left: 5%;
+        z-index: 3;
+    }
+    
+    .moveName, .moveEffect {
+        width: 90%; /* moveDetails에 대해 상대적인 너비 */
+    }
+    
+    .moveName {
+        font-size: 0.5rem;
+    }
+    
+    .moveEffect {
+        top: 48%;
+        font-size: 0.8rem;
+    }
+
+    #textDisplay {
+        width: 200px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
