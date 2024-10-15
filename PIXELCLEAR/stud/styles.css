@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('imgs/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    color: #3d3d3d;
+  }
+  
+  @font-face {
+    font-family: 'Pokemon Classic';
+    font-style: normal;
+    font-weight: normal;
+    src:local('Pokemon Classic'), url('pokemon_classic-webfont.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'PP Mondwest';
+    font-style: normal;
+    font-weight: normal;
+    src:local('PP Mondwest'), url('ppmondwest-regular-webfont.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'PP NeueBit';
+    font-style: normal;
+    font-weight: normal;
+    src:local('PP NeueBit'), url('ppneuebit-bold-webfont.woff') format('woff')
+}
+
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* 처음에는 완전히 투명합니다. */
+    }
+    to {
+      opacity: 1; /* 나타나는 동안 투명도를 1로 설정하여 완전히 보이도록 합니다. */
+    }
+  }
+
+  /* 글자 나타내는 애니메이션 설정 */
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .reveal {
+    animation: reveal 0.5s ease forwards;
+    display: inline-block;
+  }
+  
+  
+  .center-image {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+  }
+  
+  .bottom-image {
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+  
+  .button-image{
+    position: fixed;
+    left: 93%;
+    top: 5%;
+    width: 3%;
+    z-index: 2;
+  }
+
+  .button-image {
+    transition: transform 0.3s ease-in-out; /* 호버 효과를 위한 트랜지션 */
+  
+  }
+  
+  .button-image:hover {
+    transform: translateY(-10px); /* 호버 시 이미지를 위로 이동 */
+  
+  }
+
+  .falling-trash {
+    position: fixed;
+    top: 0; /* 화면 최상단에서 시작 */
+    animation: fall 5s linear infinite;
+    pointer-events: none;
+    opacity: 0.7; /* Slight transparency for effect */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(110vh); /* 화면 아래로 떨어짐 */
+    }
+}
+
+.notification-alert {
+  position: fixed;
+  top: 45%; /* 화면 중앙에 배치 */
+  left: 50%; /* 화면 중앙에 배치 */
+  transform: translate(-50%, -50%); /* 정확한 중앙 정렬 */
+  width: 42%; /* 크기를 더 크게 설정 */
+  padding: 15px;
+  border-radius: 20px;
+  opacity: 0;
+  animation: fadeInAlert 0.5s ease forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+@keyframes fadeInAlert {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+  }
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+}

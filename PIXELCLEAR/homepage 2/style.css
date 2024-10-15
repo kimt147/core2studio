@@ -1,0 +1,94 @@
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Minecraft', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #b9e1fc;
+    padding: 50px;
+    color: #333;
+}
+
+/* Set custom cursor globally */
+body {
+    cursor: url('imgs/cursor.gif') 16 16, auto;
+}
+
+
+.about-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-text p {
+    color: #59646c;
+    text-transform: uppercase;
+}
+
+.about-text h1 {
+    color: #fff8c0; /* Updated color for "Welcome to Pixel" */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-text h2 {
+    color: #ffb4e8; /* Updated color for specific section titles */
+    font-size: 1.8rem;
+    margin-top: 40px; /* Gap before each section */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Specific color for "WHY PIXEL CLEAR?" */
+.why-pixel-clear {
+    color: #78d4ff !important; /* Updated color with important */
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Specific color for "JOIN US" */
+.join-us {
+    color: #e09bff !important; /* Updated color for "JOIN US" */
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+
+
+/* Add spacing between sections */
+.about-text h2 {
+    font-size: 1.8rem;
+    margin-top: 40px; /* Gap before each section */
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+
+
+
+/* Home logo styling */
+.home-logo-link {
+    position: fixed;
+    top: 40px;
+    right: 60px;
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.home-logo {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+}
