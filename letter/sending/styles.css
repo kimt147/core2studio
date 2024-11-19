@@ -76,3 +76,10 @@ body {
   transform: scale(1.1);
   opacity: 0.8;
 }
+
+@font-face {
+  font-family: 'Modern World';
+  font-style: normal;
+  font-weight: normal;
+  src:local('Modern World'), url('Modern-World.woff') format('woff')
+}

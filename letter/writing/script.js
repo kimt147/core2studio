@@ -201,3 +201,18 @@ customText.addEventListener("keydown", (event) => {
   }
 });
 
+// 폰트 메뉴 항목 스타일 변경
+fontsMenu.querySelectorAll('button').forEach((button) => {
+  const font = button.getAttribute('data-font');
+  if (font) {
+    button.style.fontFamily = font; // 메뉴 항목에 폰트 적용
+  }
+});
+
+// 색상 메뉴 항목 스타일 변경
+colorsMenu.querySelectorAll('button').forEach((button) => {
+  const color = button.getAttribute('data-color');
+  if (color && color !== '#000000') { // 블랙은 제외
+    button.style.color = color; // 메뉴 항목에 색상 적용
+  }
+});

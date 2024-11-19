@@ -27,6 +27,17 @@ body {
   color: #333;
 }
 
+.title-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.title-link:hover {
+  color: #000;
+  transform: scale(1.05);
+}
+
 .content-container {
   display: flex;
   gap: 130px; /* 이미지 간격 */
@@ -74,4 +85,19 @@ body {
   pointer-events: none; /* 클릭 등 사용자 상호작용 방지 */
   z-index: 9999; /* 다른 요소 위에 표시 */
   mix-blend-mode: multiply; /* Multiply 모드 적용 */
+}
+
+.main-title {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-title:hover {
+  transform: scale(1.05);
+}
+
+@font-face {
+  font-family: 'Modern World';
+  font-style: normal;
+  font-weight: normal;
+  src:local('Modern World'), url('Modern-World.woff') format('woff')
 }

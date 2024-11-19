@@ -1,6 +1,8 @@
 // 요소 가져오기
 const letter1 = document.getElementById('letter1');
 const letter13 = document.getElementById('letter13');
+const letter15 = document.getElementById('letter15');
+const letter3 = document.getElementById('letter3');
 const overlayContainer = document.getElementById('overlayContainer');
 const overlayImage = document.getElementById('openedLetter');
 const overlayVideo = document.getElementById('overlayVideo');
@@ -81,11 +83,26 @@ letter1.addEventListener('click', () => {
   updateUnopenedLetters('letter1');
 });
 
+
+// 클릭 이벤트 - letter1 클릭 시
+letter3.addEventListener('click', () => {
+  letter3.src = './imgs/letteropened4.png';
+  showOverlay('./imgs/open4.png', false);
+  updateUnopenedLetters('letter3');
+});
+
 // 클릭 이벤트 - letter13 클릭 시
 letter13.addEventListener('click', () => {
   letter13.src = './imgs/letteropened2.png';
   showOverlay('./imgs/open2.png', true);
   updateUnopenedLetters('letter13');
+});
+
+// 클릭 이벤트 - letter13 클릭 시
+letter15.addEventListener('click', () => {
+  letter15.src = './imgs/letteropened3.png';
+  showOverlay('./imgs/open3.png', false);
+  updateUnopenedLetters('letter15');
 });
 
 // 오버레이 및 이미지 클릭 이벤트 - 즉시 사라지게 하기
@@ -126,4 +143,41 @@ function hideOverlay() {
   // 사운드 중지
   overlaySound.pause();
   overlaySound.currentTime = 0; // 위치를 초기화
+}
+
+// Add REPLY button dynamically
+const replyButton = document.createElement('a');
+replyButton.textContent = 'REPLY';
+replyButton.href = '../writing/index.html';
+replyButton.className = 'reply-button';
+replyButton.style.display = 'none'; // Initially hidden
+overlayContainer.appendChild(replyButton);
+
+// Show overlay with REPLY button
+function showOverlay(imageSrc, videoVisible) {
+  overlayImage.src = imageSrc;
+  overlayVideo.style.display = videoVisible ? 'block' : 'none';
+  overlayContainer.style.display = 'block';
+  overlayContainer.classList.add('active');
+  
+  // Show the REPLY button
+  replyButton.style.display = 'inline-block';
+
+  // Play overlay sound
+  overlaySound.currentTime = 0;
+  overlaySound.play();
+}
+
+// Hide overlay with REPLY button
+function hideOverlay() {
+  overlayContainer.style.display = 'none';
+  overlayVideo.style.display = 'none';
+  overlayContainer.classList.remove('active');
+  
+  // Hide the REPLY button
+  replyButton.style.display = 'none';
+
+  // Pause and reset overlay sound
+  overlaySound.pause();
+  overlaySound.currentTime = 0;
 }

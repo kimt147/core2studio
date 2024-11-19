@@ -171,6 +171,13 @@ body {
   gap: 10px; /* 텍스트와 아이콘 사이 간격 */
 }
 
+@font-face {
+  font-family: 'Modern World';
+  font-style: normal;
+  font-weight: normal;
+  src:local('Modern World'), url('Modern-World.woff') format('woff')
+}
+
 .action-button:hover {
   background-color: #333; /* 호버 시 배경색 변경 */
   transform: scale(1.05); /* 살짝 확대 */
