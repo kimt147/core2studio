@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEY, IT'S ME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@400;700&family=Modern+World&family=Dovemayo+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>HEY, YOU HAVE</h1>
+  <h2>13 UNOPENED LETTERS!!</h2>
+
+  <div class="home-icon">
+    <a href="../home/index.html">
+      <img src="./imgs/home.png" alt="Home" id="homeButton">
+    </a>
+  </div>
+
+  <div class="dropdown">
+    <button id="dropdownButton">
+      <span class="button-text" style="font-family: 'Modern World';">NEWEST</span>
+      <span class="triangle" style="font-family: 'Dovemayo_gothic', Arial, sans-serif;">▼</span>
+    </button>
+    <div id="dropdownMenu" class="dropdown-menu">
+      <button id="newest">NEWEST</button>
+      <button id="oldest">OLDEST</button>
+    </div>
+  </div>  
+  
+  <div class="images" id="imageContainer">
+    <img src="./imgs/letterunopened1.png" alt="Letter 1" id="letter1">
+    <img src="./imgs/letterunopened2.png" alt="Letter 2">
+    <img src="./imgs/letterunopened3.png" alt="Letter 3">
+    <img src="./imgs/letterunopened4.png" alt="Letter 4">
+    <img src="./imgs/letterunopened5.png" alt="Letter 5">
+    <img src="./imgs/letterunopened6.png" alt="Letter 6">
+    <img src="./imgs/letterunopened7.png" alt="Letter 7">
+    <img src="./imgs/letterunopened8.png" alt="Letter 8">
+    <img src="./imgs/letterunopened9.png" alt="Letter 9">
+    <img src="./imgs/letterunopened10.png" alt="Letter 10">
+    <img src="./imgs/letterunopened11.png" alt="Letter 11">
+    <img src="./imgs/letterunopened12.png" alt="Letter 12">
+    <img src="./imgs/letterunopened13.png" alt="Letter 13" id="letter13">
+    <img src="./imgs/letterunopened14.png" alt="Letter 14">
+    <img src="./imgs/letterunopened15.png" alt="Letter 15">
+    <img src="./imgs/letterunopened16.png" alt="Letter 16">
+    <img src="./imgs/letterunopened17.png" alt="Letter 17">
+  </div>
+
+  <div class="overlay-container" id="overlayContainer">
+    <img src="./imgs/open1.png" alt="Opened Letter" class="overlay" id="openedLetter">
+    <video src="./imgs/33.mp4" class="overlay-video" id="overlayVideo" autoplay muted loop></video>
+  </div>
+
+  <audio id="overlaySound" src="./imgs/sound.mp4"></audio>
+  <div class="texture-layer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+  font-family: 'BioRhyme Expanded', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.sending-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* 위치 조정을 위해 추가 */
+  top: -140px; /* 위로 올리기 */
+}
+
+.sending-gif {
+  max-width: 1200px; /* GIF 크기 조정 */
+  height: auto;
+  margin-bottom: 20px; /* 텍스트와의 간격 */
+  transition: opacity 1s ease; /* 페이드 효과 */
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0; /* 투명하게 */
+}
+
+.fade-in {
+  opacity: 1; /* 다시 보이게 */
+}
+
+.sending-text {
+  font-family: 'Modern World', sans-serif; /* 폰트 적용 */
+  font-size: 2.5rem; /* 텍스트 크기 */
+  font-weight: bold;
+  text-transform: uppercase; /* 대문자 변환 */
+  color: #333;
+  transition: opacity 1s ease; /* 텍스트 페이드 효과 */
+  margin-top: -220px;
+}
+
+.texture-layer {
+  position: fixed; /* 페이지 전체에 고정 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./imgs/texture.jpg') repeat; /* 텍스처 이미지 반복 */
+  background-size: cover; /* 배경 이미지를 화면 크기에 맞춤 */
+  pointer-events: none; /* 클릭 등 사용자 상호작용 방지 */
+  z-index: 9999; /* 다른 요소 위에 표시 */
+  mix-blend-mode: multiply; /* Multiply 모드 적용 */
+}
+
+
+.home-icon {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.home-icon img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.home-icon img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}

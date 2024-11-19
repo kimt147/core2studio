@@ -1,0 +1,245 @@
+body {
+  font-family: 'BioRhyme Expanded', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.to-section {
+  position: absolute;
+  top: 50px; /* 아래로 이동 */
+  left: 50px; /* 오른쪽으로 이동 */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* TO:와 버튼 사이의 간격 추가 */
+}
+
+.to-label {
+  font-family: 'Modern World', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* 버튼 간격 */
+  margin-top: 170px; /* 전체 버튼 아래로 이동 */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  font-family: 'Modern World', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  cursor: pointer;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.triangle {
+  font-family: 'Dovemayo Gothic', Arial, sans-serif;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 120%; /* 메뉴를 버튼 아래로 내림 */
+  left: 0;
+  width: 250px; /* 버튼과 동일한 너비 */
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown-menu button {
+  font-family: 'Modern World', sans-serif;
+  font-size: 1rem;
+  padding: 15px; /* 패딩 조정 */
+  width: 100%; /* 버튼 너비 */
+  text-align: center; /* 텍스트 센터 정렬 */
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.dropdown-menu button:hover {
+  background-color: #333;
+}
+
+
+.footer-image {
+  position: relative; /* 자식 요소를 절대 위치로 배치하기 위해 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px; /* 상단 여백 추가 */
+}
+
+.footer-image img {
+  max-width: 42%; /* 이미지 너비를 화면에 맞게 조정 */
+  height: auto; /* 이미지 비율 유지 */
+}
+
+.text-overlay {
+  position: absolute; /* 이미지 위에 텍스트 박스를 배치 */
+  top: 38%; /* 세로 중심 위치 */
+  left: 49%; /* 가로 중심 위치 */
+  transform: translate(-50%, -50%); /* 가운데 정렬 */
+  width: 30%; /* 텍스트 박스 너비 */
+  height: 65%; /* 텍스트 박스 높이 */
+}
+
+.text-overlay textarea {
+  width: 100%; /* 텍스트 박스 너비 */
+  height: 100%; /* 텍스트 박스 높이 */
+  font-family: 'BioRhyme Expanded', Arial, sans-serif; /* 폰트 설정 */
+  font-size: 1.2rem; /* 폰트 크기 */
+  padding: 10px; /* 내부 여백 */
+  border: none; /* 테두리 제거 */
+  border-radius: 10px; /* 둥근 모서리 */
+  resize: none; /* 사용자가 텍스트 박스 크기를 조정하지 못하게 설정 */
+  outline: none; /* 포커스 시 외곽선 제거 */
+  background-color: rgba(255, 255, 255, 0.8); /* 배경을 약간 반투명 흰색으로 설정 */
+}
+
+
+
+.texture-layer {
+  position: fixed; /* 페이지 전체에 고정 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./imgs/texture.jpg') repeat; /* 텍스처 이미지 반복 */
+  background-size: cover; /* 배경 이미지를 화면 크기에 맞춤 */
+  pointer-events: none; /* 클릭 등 사용자 상호작용 방지 */
+  z-index: 9999; /* 다른 요소 위에 표시 */
+  mix-blend-mode: multiply; /* Multiply 모드 적용 */
+}
+
+
+.bottom-buttons {
+  position: absolute; /* 위치를 절대 배치로 설정 */
+  bottom: 50px; /* 화면 아래에서 50px 위로 이동 */
+  left: 50px; /* 화면 왼쪽에서 50px 안쪽으로 이동 */
+  display: flex;
+  flex-direction: column; /* 버튼을 위아래로 배치 */
+  gap: 20px; /* 버튼 간 간격 */
+  z-index: 999;
+}
+
+.action-button {
+  font-family: 'Modern World', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 0px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none; /* 밑줄 제거 */
+  text-align: center;
+  cursor: pointer;
+  width: 200px; /* ADD FILES 버튼과 동일한 너비 */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center; /* 텍스트와 아이콘 정렬 */
+  justify-content: center; /* 가운데 정렬 */
+  gap: 10px; /* 텍스트와 아이콘 사이 간격 */
+}
+
+.action-button:hover {
+  background-color: #333; /* 호버 시 배경색 변경 */
+  transform: scale(1.05); /* 살짝 확대 */
+}
+
+.action-button img {
+  width: 18px; /* 아이콘 크기 */
+  height: 18px;
+  pointer-events: none; /* 이미지가 호버 상태에 영향을 주지 않도록 설정 */
+}
+
+
+.file-viewer {
+  position: absolute;
+  bottom: -100%; /* 초기 위치: 화면 아래 */
+  left: 49%;
+  transform: translateX(-50%);
+  display: none; /* 초기에는 숨김 */
+  z-index: 1000; /* 다른 요소 위에 표시 */
+  animation: slideUp 0.5s ease forwards; /* 슬라이드 업 애니메이션 */
+}
+
+.file-viewer img {
+  max-width: 80%; /* 화면 크기에 맞게 조정 */
+  height: auto;
+  cursor: pointer; /* 클릭 가능 표시 */
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -100%; /* 화면 아래 */
+  }
+  to {
+    bottom: 160px; /* 화면 아래에서 20px 위로 */
+  }
+}
+
+
+
+.draggable-icon {
+  position: absolute;
+  top: 50%; /* 초기 위치 */
+  left: 50%; /* 초기 위치 */
+  transform: translate(-50%, -50%);
+  display: none; /* 초기에는 숨김 */
+  z-index: 1001; /* File Viewer 위에 표시 */
+  cursor: grab;
+}
+
+.draggable-icon img {
+  max-width: 170px; /* 크기 조정 */
+  height: auto;
+}
+
+.home-icon {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.home-icon img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.home-icon img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+

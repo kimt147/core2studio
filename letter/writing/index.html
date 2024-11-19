@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizable Text Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@400;700&family=Modern+World&family=Dovemayo+Gothic&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="home-icon">
+    <a href="../home/index.html">
+      <img src="./imgs/home.png" alt="Home" id="homeButton">
+    </a>
+  </div>
+
+  <div class="to-section">
+    <span class="to-label">TO:</span>
+    <div class="dropdown">
+      <button class="dropdown-button" id="toButton">SELECT<span class="triangle" style="font-family: 'Dovemayo Gothic'; margin-left: 20px;">▼</span></button>
+      <div class="dropdown-menu" id="toMenu">
+        <button data-name="LIZ">LIZ</button>
+        <button data-name="GAHYUN">GAHYUN</button>
+        <button data-name="CORY">CORY</button>
+        <button data-name="NAK">NAK</button>
+        <button data-name="JEMIN">JEMIN</button>
+        <button data-name="JIYUN">JIYUN</button>
+        <button data-name="SEOYOON">SEOYOON</button>
+        <button data-name="IREH">IREH</button>
+        <button data-name="ADD CONTACT">ADD CONTACT</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <!-- Buttons for fonts, colors, and size -->
+  <div class="toolbar">
+    <div class="dropdown">
+      <button class="dropdown-button" id="fontsButton">FONTS<span class="triangle" style="font-family: 'Dovemayo_gothic'; margin-left: 20px;">▼</span></button>
+      <div class="dropdown-menu" id="fontsMenu">
+        <button data-font="'BioRhyme Expanded', Arial, sans-serif">BIORHYME</button>
+        <button data-font="'Dovemayo Gothic', Arial, sans-serif">GOTHIC</button>
+        <button data-font="'Patrick Hand', Arial, sans-serif">SCRIPT</button>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropdown-button" id="colorsButton">COLORS<span class="triangle" style="font-family: 'Dovemayo_gothic'; margin-left: 20px;">▼</span></button>
+      <div class="dropdown-menu" id="colorsMenu">
+        <button data-color="#000000">BLACK</button>
+        <button data-color="#ffca27">YELLOW</button>
+        <button data-color="#4182d3">BLUE</button>
+        <button data-color="#f17db9">PINK</button>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropdown-button" id="sizeButton">SIZE<span class="triangle" style="font-family: 'Dovemayo_gothic'; margin-left: 20px;">▼</span></button>
+      <div class="dropdown-menu" id="sizeMenu">
+        <button data-size="13px">SMALL</button>
+        <button data-size="16px">MEDIUM</button>
+        <button data-size="30px">LARGE</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-buttons">
+    <button class="action-button" id="addFilesButton">
+      ADD FILES
+      <img src="./imgs/plus.svg" alt="Add Icon">
+    </button>
+    <a href="../sending/index.html" class="action-button">SEND</a>
+  </div>
+
+  <!-- Editable text area -->
+  <div class="footer-image">
+    <div class="text-overlay">
+      <textarea id="customText" placeholder="Write your message here..."></textarea>
+    </div>
+    <img src="./imgs/paper.png" alt="Paper Image">
+  </div>
+
+  
+  <div class="texture-layer"></div>
+
+  <div class="file-viewer" id="fileViewer">
+    <img src="./imgs/files.png" alt="File Viewer" id="fileImage">
+  </div>
+  
+  <div id="draggableIcon" class="draggable-icon">
+    <img src="./imgs/icon4.png" alt="Icon 4">
+  </div>
+  
+  <video id="typingSound" loop style="display: none;">
+    <source src="./imgs/writing.mp4" type="video/mp4">
+  </video>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
