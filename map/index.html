@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info-box">
+        <p>Click on the map to add a marker and attach a note!</p>
+        <textarea id="note-input" placeholder="Write your note here..."></textarea>
+        <input type="file" id="file-input" accept="image/*,video/*,audio/*">
+        <button id="save-btn">Save Note</button>
+    </div>
+    
+    <div id="logo-container">
+        <img src="./imgs/logo.png" alt="Logo" id="logo">
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

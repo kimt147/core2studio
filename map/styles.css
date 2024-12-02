@@ -1,0 +1,183 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    flex: 1;
+    width: 100%;
+    height: 80vh;
+}
+
+#info-box {
+    padding: 10px;
+    background: #f9f9f9;
+    border-top: 2px solid #ccc;
+    text-align: center;
+}
+
+#note-input {
+    width: 80%;
+    height: 50px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+#save-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#save-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 스타일 추가 */
+body {
+    position: relative;
+}
+
+#my-location-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#my-location-btn:hover {
+    background-color: #0056b3;
+}
+
+.gps-marker .pulse {
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Arial Narrow를 적용하는 스타일 */
+body, #map, .leaflet-popup-content, .leaflet-control {
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+/* 팝업 텍스트 스타일 */
+.leaflet-popup-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* 버튼에 폰트 적용 */
+#my-location-btn {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* 기타 지도 UI 요소들 */
+.leaflet-control-scale-line,
+.leaflet-control-attribution {
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+/* 로고 컨테이너 스타일 */
+#logo-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001; /* 지도와 다른 요소 위에 표시되도록 */
+    pointer-events: none; /* 클릭 이벤트가 로고를 통해 차단되지 않도록 */
+}
+
+/* 로고 이미지 스타일 */
+#logo {
+    max-width: 300px; /* 로고의 최대 크기 설정 */
+    height: auto; /* 비율 유지 */
+}
+
+.gps-marker .pulse {
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+.leaflet-bar.leaflet-control {
+    margin-bottom: 8px; /* Space between controls */
+}
+
+.my-location-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.my-location-control:hover {
+    background-color: #f0f0f0;
+}
+
+.country-control {
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+
+.country-select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
