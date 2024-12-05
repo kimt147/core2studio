@@ -1,94 +1,91 @@
-/* 기본 초기화 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Background color */
 body {
-    font-family: 'Minecraft', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #b9e1fc;
-    padding: 50px;
+    background-color: #bbe1fc;
     color: #333;
+    font-family: 'Minecraft', Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Set custom cursor globally */
-body {
-    cursor: url('imgs/cursor.gif') 16 16, auto;
-}
-
-
-.about-container {
-    max-width: 1300px;
-    margin: 0 auto;
+/* Arcade-style frame around the content */
+.arcade-frame {
+    background: linear-gradient(to bottom, #2d2d2d, #111);
+    border: 10px solid #4c4c4c;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     padding: 20px;
+    width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
 }
 
-.about-text p {
-    color: #59646c;
-    text-transform: uppercase;
+/* Animated screen border effect */
+.screen-border {
+    border: 5px dashed #78d4ff;
+    border-radius: 10px;
+    padding: 15px;
 }
 
-.about-text h1 {
-    color: #fff8c0; /* Updated color for "Welcome to Pixel" */
+/* Typing animation for title */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#typing-title {
+    font-family: 'Minecraft', Arial, sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #fff8c0;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 3px solid #ffb4e8;
+    animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
+    animation-fill-mode: forwards;
 }
 
-.about-text h2 {
-    color: #ffb4e8; /* Updated color for specific section titles */
-    font-size: 1.8rem;
-    margin-top: 40px; /* Gap before each section */
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-/* Specific color for "WHY PIXEL CLEAR?" */
-.why-pixel-clear {
-    color: #78d4ff !important; /* Updated color with important */
-    font-size: 1.8rem;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-/* Specific color for "JOIN US" */
-.join-us {
-    color: #e09bff !important; /* Updated color for "JOIN US" */
-    font-size: 1.8rem;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-
-
-
-/* Add spacing between sections */
-.about-text h2 {
-    font-size: 1.8rem;
-    margin-top: 40px; /* Gap before each section */
-    margin-bottom: 10px;
-}
-
+/* Content color */
 .about-text p {
-    margin-bottom: 20px; /* Space below each paragraph */
+    color: #59646c; /* Gray for normal text */
 }
 
+.about-text h2 {
+    color: #ffb4e8; /* Light pink for section titles */
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
 
+.why-pixel-clear {
+    color: #78d4ff !important;
+}
 
-/* Home logo styling */
+.join-us {
+    color: #e09bff !important;
+}
+
+/* Center home logo */
 .home-logo-link {
     position: fixed;
-    top: 40px;
-    right: 60px;
-    z-index: 1000; /* Ensure it's on top of other elements */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .home-logo {
-    width: 40px; /* Adjust size as needed */
+    width: 40px;
     height: auto;
     cursor: pointer;
 }
