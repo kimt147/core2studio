@@ -92,3 +92,10 @@ body {
     height: auto;
     cursor: pointer;
 }
+
+@font-face {
+    font-family: 'Minecraft';
+    font-style: normal;
+    font-weight: normal;
+    src:local('Minecraft'), url('Minecraft.woff') format('woff')
+  }
