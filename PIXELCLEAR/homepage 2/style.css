@@ -55,6 +55,11 @@ body {
     animation-fill-mode: forwards;
 }
 
+.blink-done {
+    animation: none; /* Completely stop the blinking animation */
+    border-right: none; /* Remove the cursor border */
+}
+
 /* Content color */
 .about-text p {
     color: #59646c; /* Gray for normal text */
@@ -89,10 +94,3 @@ body {
     height: auto;
     cursor: pointer;
 }
-
-@font-face {
-    font-family: 'Minecraft';
-    font-style: normal;
-    font-weight: normal;
-    src:local('Minecraft'), url('Minecraft.woff') format('woff')
-  }
