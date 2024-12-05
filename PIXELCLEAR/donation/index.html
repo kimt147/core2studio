@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - Pixel Clear</title>
+    <title>Join Us - Pixel Clear</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,54 +12,27 @@
         <img src="imgs/home.png" alt="Home" class="home-logo">
     </a>
 
-    <div class="donation-container">
-        <!-- Left Column: Donation Form -->
-        <div class="donation-form">
-            <h1>Support Our Cause</h1>
-            <p>Your contribution helps keep our cities clean and beautiful!</p>
+    <div class="participation-container">
+        <!-- Left Column: Participation Info -->
+        <div class="participation-info">
+            <h1>Join Our Mission</h1>
+            <p>Help us clean up the streets of New York and make a difference in our community!</p>
 
-            <!-- Donation Amount Selection -->
-            <label for="amount">Select Amount:</label>
-            <select id="amount">
-                <option value="10">$10</option>
-                <option value="25">$25</option>
-                <option value="50">$50</option>
-                <option value="100">$100</option>
-                <option value="other">Other</option>
-            </select>
+            <h3>How to Participate:</h3>
+            <ul>
+                <li>Sign up for one of our upcoming cleanup events.</li>
+                <li>Bring your energy, gloves, and a smile!</li>
+                <li>Meet new people and contribute to a cleaner city.</li>
+            </ul>
 
-            <!-- Custom Amount Input (Visible only if "Other" is selected) -->
-            <div id="custom-amount" style="display:none;">
-                <label for="customAmount">Enter Amount:</label>
-                <input type="number" id="customAmount" min="1" placeholder="Enter amount">
-            </div>
-
-            <!-- Payment Method Options -->
-            <h3>Choose Payment Method:</h3>
-            <button class="paypal-btn">Donate with PayPal</button>
-            <button class="credit-btn">Credit Card</button>
-
-            <!-- Credit Card Form (Initially hidden) -->
-            <div class="credit-card-form" style="display:none;">
-                <label for="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX">
-                
-                <label for="expiry">Expiry Date:</label>
-                <input type="text" id="expiry" placeholder="MM/YY">
-                
-                <label for="cvc">CVC:</label>
-                <input type="text" id="cvc" placeholder="CVC">
-                
-                <button class="submit-donation">Submit Donation</button>
-            </div>
+            <button class="signup-btn">Sign Up Now</button>
         </div>
 
         <!-- Right Column: Image Display -->
-        <div class="donation-image">
-            <div class="random-image hover-image"></div> <!-- Random image container -->
+        <div class="participation-image">
+            <div class="random-image hover-image"></div>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 </body>

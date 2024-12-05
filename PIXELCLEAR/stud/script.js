@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Add click event listener to navigate to the desired page
       alertImage.addEventListener('click', () => {
-          window.location.href = '../studcopy/index.html';
+          window.location.href = '../homepage/index.html';
       });
   }, 3000); // Display alert after 3 seconds
 });

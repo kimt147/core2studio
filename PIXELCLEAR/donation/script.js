@@ -1,21 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const amountSelect = document.getElementById("amount");
-    const customAmountDiv = document.getElementById("custom-amount");
-    const creditButton = document.querySelector(".credit-btn");
-    const creditCardForm = document.querySelector(".credit-card-form");
-
-    // Show custom amount input if "Other" is selected
-    amountSelect.addEventListener("change", () => {
-        customAmountDiv.style.display = amountSelect.value === "other" ? "block" : "none";
-    });
-
-    // Show credit card form when the Credit Card button is clicked
-    creditButton.addEventListener("click", () => {
-        creditCardForm.style.display = "block";
-    });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     // List of image sources
     const images = [
         { img: 'imgs/image1.jpg', pixel: 'imgs/imagepixel1.png' },
@@ -33,10 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Select a random image
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
-    // Select the random image container
-    const randomImageContainer = document.querySelector('.random-image');
-
     // Set the main image as background
+    const randomImageContainer = document.querySelector('.random-image');
     randomImageContainer.style.backgroundImage = `url('${randomImage.img}')`;
 
     // Set the pixelated overlay as the :before background-image using CSS
